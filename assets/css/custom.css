@@ -1,0 +1,1121 @@
+/* ==========================================================================
+   Global & Utility Styles
+   ========================================================================== */
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+.landing-subtitle {
+  font-size: 1.25rem;
+}
+
+:root {
+  --background-color: #ffffff;
+  --text-color: #000000;
+  --accent-color: rgb(3, 161, 224);
+  --accent-secondary: rgb(0, 255, 221);
+}
+
+[data-theme="dark"] {
+  --background-color: #121212;
+  --text-color: #f1f1f1;
+  --accent-color: rgb(3, 161, 224);
+  --accent-secondary: rgb(0, 255, 221);
+}
+
+/* Hidden / Visible Sections */
+.hidden-section {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  pointer-events: none;
+}
+
+.visible-section {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* Scroll Down Arrow */
+.scroll-down {
+  position: relative;
+  margin-top: 20px;
+  font-size: 32px;
+  cursor: pointer;
+  animation: bounce 3s ease-in-out infinite;
+  z-index: 1000;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.scroll-down.hidden {
+  opacity: 0;
+  transform: translateY(20px) translateX(-50%);
+  pointer-events: none;
+}
+
+
+/* ==========================================================================
+   Timeline Component Styles
+   ========================================================================== */
+
+/* Link / Navigation & Active Indicators */
+.link-after,
+.nav-link::after,
+.navbar-brand::after,
+.nav-item.active::after {
+  background: linear-gradient(to right, rgb(3, 161, 224), rgb(0, 255, 221)) !important;
+}
+
+/* Timeline Backgrounds & Borders */
+.timeline-body::after {
+  background-color: var(--accent-color) !important;
+}
+
+.timeline-body .timeline-item:after {
+  border: 4px solid var(--accent-color) !important; /* Keeps the cyan border */
+}
+
+/* Light Mode - Timeline Content */
+.timeline-body .timeline-item .content {
+  background: linear-gradient(to right, rgb(3, 161, 224), rgb(0, 255, 221))
+      left bottom no-repeat;
+  border-bottom: 0px solid var(--accent-color) !important;
+  background-size: 100% 2px;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(3, 161, 224, 0.15);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.timeline-body .timeline-item .content:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 18px rgba(3, 161, 224, 0.3);
+}
+
+[data-theme="light"] .timeline-body,
+[data-theme="light"] .timeline-body .timeline-item .content,
+[data-theme="light"] .timeline-body .timeline-item:after {
+  background-color: var(--background-color) !important;
+}
+
+/* Dark Mode - Timeline Backgrounds */
+[data-theme="dark"] .timeline-body {
+  background-color: #242526 !important;
+}
+
+[data-theme="dark"] .timeline-body .timeline-item .content {
+  background-color: #242526 !important;
+}
+
+[data-theme="dark"] .timeline-body .timeline-item:after {
+  background-color: #242526 !important;
+}
+
+.timeline-item {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.timeline-item:nth-child(1) { animation-delay: 0.1s; }
+.timeline-item:nth-child(2) { animation-delay: 0.2s; }
+.timeline-item:nth-child(3) { animation-delay: 0.3s; }
+.timeline-item:nth-child(4) { animation-delay: 0.4s; }
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+/* ==========================================================================
+   Badge Component Styles
+   ========================================================================== */
+
+/* Aligns badges inline and vertically centers content */
+.badge {
+  position: relative;
+  display: inline-block;
+  /* Controls badge shape and border appearance */
+  border: 2px solid transparent; /* Ensure border is visible */
+  border-color: var(--accent-color) !important;
+  transition: all 0.3s ease-in-out;
+  /* Sets badge text colour */
+  color: var(--accent-color) !important;
+  overflow: hidden; /* Prevent content overflow */
+  z-index: 1;
+  vertical-align: middle; /* Ensure proper alignment */
+}
+
+/* Sets badge colours for dark theme */
+[data-theme="dark"] .badge {
+  color: var(--accent-color) !important;
+  border-color: var(--accent-color) !important;
+}
+
+/* Adds animated gradient background for badge hover effect */
+.badge::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%; /* Start off-screen */
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, var(--accent-color), var(--accent-secondary));
+  transition: left 0.4s ease-in-out; /* Animate the left movement */
+  z-index: -1;
+  display: block; /* Prevent any inline displacement */
+}
+
+/* Adds hover effects or focus styles: gradient slides in */
+.badge:hover::before {
+  left: 0; /* Move the gradient from left to right */
+}
+
+/* Adds hover effects or focus styles: text turns white, border removed */
+.badge:hover {
+  color: white !important;
+  border-color: transparent !important;
+}
+
+/* Keyboard accessibility: focus style for badge */
+.badge:focus {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 2px;
+}
+
+
+/* ==========================================================================
+   Markdown Body Elements
+   ========================================================================== */
+
+/* Blockquotes */
+.markdown-body blockquote {
+  border-left-color: var(--accent-color) !important;
+}
+
+/* Table Headers */
+.markdown-body table th {
+  background-color: var(--accent-color) !important;
+  color: inherit !important; /* Keeps default text color */
+}
+
+/* Horizontal Rules */
+.markdown-body hr {
+  background: var(--accent-color) !important;
+}
+
+
+/* ==========================================================================
+   Button Styles
+   ========================================================================== */
+
+/* Primary Buttons */
+.markdown-body .btn-primary {
+  background-color: var(--accent-color) !important;
+  border-color: var(--accent-color) !important;
+  color: white !important; /* Ensures button text remains readable */
+}
+
+.markdown-body .btn-primary:hover {
+  background-color: #24b8b1 !important;
+  border-color: #24b8b1 !important;
+}
+
+.markdown-body a:not(.btn):not([class^="carousel-"]):not([class^="list-"]):not(.no-underline)::after {
+  background: var(--accent-color) !important;
+}
+
+/* Default Transparent Button Style */
+.markdown-body .btn,
+p.text-center a {
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 8px;
+  border: 2px solid var(--accent-color); /* Default border */
+  background-color: transparent;
+  color: var(--accent-color);
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out, border-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+/* Gradient Fill Animation Effect */
+.markdown-body .btn::before,
+p.text-center a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, var(--accent-color), #24b8b1);
+  z-index: -1;
+  transition: transform 0.4s ease-in-out;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+/* Hover Effects for Buttons */
+.markdown-body .btn:hover,
+p.text-center a:hover {
+  color: white !important; /* Ensures text stays readable */
+  border-color: var(--accent-color) !important; /* Matches the fill color */
+  background-color: transparent !important; /* Prevents flickering */
+  transform: translateY(-3px); /* Adds slight lift */
+  box-shadow: 0 10px 20px rgba(41, 214, 205, 0.3);
+}
+
+.markdown-body .btn:hover::before,
+p.text-center a:hover::before {
+  transform: scaleX(1);
+}
+
+
+/* ==========================================================================
+   Back Button Text Color
+   ========================================================================== */
+
+.back-button {
+  color: #343a40 !important; /* Equivalent to $text-white */
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+[data-theme="dark"] .back-button {
+  color: rgba(255, 255, 255, 0.6) !important; /* Equivalent to $text-black */
+}
+
+.back-button:hover {
+  color: var(--accent-color) !important;
+}
+
+/* ==========================================================================
+   Outline Buttons - Theme-specific Styling
+   ========================================================================== */
+
+/* Resume Button - Light Mode */
+[data-theme="light"] .btn-outline-dark.resume {
+  border-color: #B20000 !important;
+  color: #B20000 !important;
+}
+
+[data-theme="light"] .btn-outline-dark.resume i {
+  color: #B20000 !important;
+}
+
+[data-theme="light"] .btn-outline-dark.resume:hover {
+  background-color: #FF0000 !important;
+  color: white !important;
+  border-color: transparent !important;
+}
+
+[data-theme="light"] .btn-outline-dark.resume:hover i {
+  color: white !important;
+}
+
+/* Resume Button - Dark Mode */
+[data-theme="dark"] .btn-outline-dark.resume {
+  border-color: #B20000 !important;
+  color: #B20000 !important;
+}
+
+[data-theme="dark"] .btn-outline-dark.resume i {
+  color: #B20000 !important;
+}
+
+[data-theme="dark"] .btn-outline-dark.resume:hover {
+  background-color: #FF0000 !important;
+  color: white !important;
+  border-color: transparent !important;
+}
+
+[data-theme="dark"] .btn-outline-dark.resume:hover i {
+  color: white !important;
+}
+
+/* GitHub Button - Light Mode */
+[data-theme="light"] .btn-outline-dark.github {
+  border-color: #888888 !important;
+  color: #888888 !important;
+}
+
+[data-theme="light"] .btn-outline-dark.github i {
+  color: #888888 !important;
+}
+
+[data-theme="light"] .btn-outline-dark.github:hover {
+  background-color: #333333 !important;
+  color: white !important;
+  border-color: transparent !important;
+}
+
+[data-theme="light"] .btn-outline-dark.github:hover i {
+  color: white !important;
+}
+
+/* GitHub Button - Dark Mode */
+[data-theme="dark"] .btn-outline-dark.github {
+  border-color: #888888 !important;
+  color: #888888 !important;
+}
+
+[data-theme="dark"] .btn-outline-dark.github i {
+  color: #888888 !important;
+}
+
+[data-theme="dark"] .btn-outline-dark.github:hover {
+  background-color: #333333 !important;
+  color: white !important;
+  border-color: transparent !important;
+}
+
+[data-theme="dark"] .btn-outline-dark.github:hover i {
+  color: white !important;
+}
+
+/* LinkedIn Button - Light Mode */
+[data-theme="light"] .btn-outline-dark.linkedin {
+  border-color: #0077B5 !important;
+  color: #0077B5 !important;
+}
+
+[data-theme="light"] .btn-outline-dark.linkedin i {
+  color: #0077B5 !important;
+}
+
+[data-theme="light"] .btn-outline-dark.linkedin:hover {
+  background-color: #0077B5 !important;
+  color: white !important;
+  border-color: transparent !important;
+}
+
+[data-theme="light"] .btn-outline-dark.linkedin:hover i {
+  color: white !important;
+}
+
+/* LinkedIn Button - Dark Mode */
+[data-theme="dark"] .btn-outline-dark.linkedin {
+  border-color: #0077B5 !important;
+  color: #0077B5 !important;
+}
+
+[data-theme="dark"] .btn-outline-dark.linkedin i {
+  color: #0077B5 !important;
+}
+
+[data-theme="dark"] .btn-outline-dark.linkedin:hover {
+  background-color: #0077B5 !important;
+  color: white !important;
+  border-color: transparent !important;
+}
+
+[data-theme="dark"] .btn-outline-dark.linkedin:hover i {
+  color: white !important;
+}
+
+
+/* ==========================================================================
+   Responsive Styles for Outline Buttons
+   ========================================================================== */
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .d-flex.justify-content-center {
+    gap: 0.5rem !important;
+  }
+  .btn-outline-dark {
+    width: 60px !important;
+    height: 60px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    text-align: center !important;
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+    font-size: 0 !important;
+  }
+  .btn-outline-dark i + * {
+    display: none !important;
+  }
+  .btn-outline-dark i {
+    font-size: 1.8rem !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    height: 100% !important;
+    text-align: center !important;
+    margin: 0 auto !important;
+  }
+}
+
+/* Desktop Styles */
+@media (min-width: 769px) {
+  .btn-outline-dark {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px !important;
+    padding: 8px 16px !important;
+  }
+}
+
+
+/* ==========================================================================
+   Gradient Fill Hover Effects for Outline Buttons
+   ========================================================================== */
+
+   .btn-outline-dark.resume,
+   .btn-outline-dark.github,
+   .btn-outline-dark.linkedin {
+     position: relative;
+     overflow: hidden;
+     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+   }
+   
+   /* Shared ::before styles */
+   .btn-outline-dark.resume::before,
+   .btn-outline-dark.github::before,
+   .btn-outline-dark.linkedin::before {
+     content: "";
+     position: absolute;
+     inset: 0; /* shorthand for top: 0; left: 0; right: 0; bottom: 0 */
+     z-index: -1;
+     transform: scaleX(0);
+     transform-origin: left;
+     transition: transform 0.4s ease-in-out;
+   }
+   
+   /* Resume */
+   .btn-outline-dark.resume::before {
+     background: linear-gradient(to right, #b20000, #ff0000);
+   }
+   .btn-outline-dark.resume:hover {
+     transform: translateY(-3px);
+     box-shadow: 0 10px 20px rgba(178, 0, 0, 0.3);
+   }
+   .btn-outline-dark.resume:hover::before {
+     transform: scaleX(1);
+   }
+   
+   /* GitHub */
+   .btn-outline-dark.github::before {
+     background: linear-gradient(to right, #888, #333);
+   }
+   .btn-outline-dark.github:hover {
+     transform: translateY(-3px);
+     box-shadow: 0 10px 20px rgba(136, 136, 136, 0.3);
+   }
+   .btn-outline-dark.github:hover::before {
+     transform: scaleX(1);
+   }
+   
+   /* LinkedIn */
+   .btn-outline-dark.linkedin::before {
+     background: linear-gradient(to right, #005582, #0077B5, #00A8FF);
+   }
+   .btn-outline-dark.linkedin:hover {
+     transform: translateY(-3px);
+     box-shadow: 0 10px 20px rgba(0, 119, 181, 0.3);
+   }
+   .btn-outline-dark.linkedin:hover::before {
+     transform: scaleX(1);
+   }
+
+
+/* ==========================================================================
+   Avatar & Effects
+   ========================================================================== */
+
+   .avatar-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 1200px;
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    position: relative;
+    animation: fadeInZoom 1.2s ease-out, float 5s infinite ease-in-out;
+  }
+  
+  .avatar-container img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+    transition: transform 0.4s ease-out, box-shadow 0.4s ease-in-out, filter 0.4s ease-out;
+    transform-style: preserve-3d;
+    will-change: transform;
+    position: relative;
+    z-index: 2;
+    animation: gradientGlow 3s infinite alternate;
+    box-shadow: 0px 10px 30px rgba(3, 161, 224, 0.3),
+                0px 10px 30px rgba(0, 255, 221, 0.3);
+  }
+  
+  .avatar-container::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(3, 161, 224, 0.2), rgba(0, 255, 221, 0.1));
+    filter: blur(20px);
+    z-index: 1;
+    opacity: 1;
+    transition: all 0.4s ease-in-out;;
+  }
+  
+  .avatar-container:hover::before {
+    background: radial-gradient(circle, rgba(3, 161, 224, 0.6), rgba(0, 255, 221, 0.5));
+    filter: blur(60px);
+    opacity: 1;
+    transition: all 0.4s ease-in-out;
+  }
+  
+  /* Keyframes for Avatar Effects */
+  @keyframes fadeInZoom {
+    0% {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes backgroundPulse {
+    0% {
+      opacity: 0.8;
+      filter: blur(50px);
+      background: radial-gradient(circle, rgba(3, 161, 224, 0.7), rgba(0, 255, 221, 0.6));
+    }
+    50% {
+      opacity: 1;
+      filter: blur(65px);
+      background: radial-gradient(circle, rgba(0, 255, 221, 0.8), rgba(3, 161, 224, 0.8));
+    }
+    100% {
+      opacity: 0.8;
+      filter: blur(50px);
+      background: radial-gradient(circle, rgba(3, 161, 224, 0.7), rgba(0, 255, 221, 0.6));
+    }
+  }
+  
+  @keyframes gradientGlow {
+    0% {
+      box-shadow: 0px 0px 15px rgba(3, 161, 224, 0.2),
+                  0px 0px 20px rgba(0, 255, 221, 0.15);
+    }
+    50% {
+      box-shadow: 0px 0px 20px rgba(0, 255, 221, 0.25),
+                  0px 0px 25px rgba(3, 161, 224, 0.2);
+    }
+    100% {
+      box-shadow: 0px 0px 15px rgba(3, 161, 224, 0.2),
+                  0px 0px 20px rgba(0, 255, 221, 0.15);
+    }
+  }
+  
+  .avatar-container img:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 24px rgba(3, 161, 224, 0.3),
+                0px 8px 24px rgba(0, 255, 221, 0.3);
+    filter: brightness(1); /* No extra brightness on hover */
+  }
+  
+  @keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+    100% { transform: translateY(0); }
+  }
+  
+  @keyframes shadowTrail {
+    0% {
+      opacity: 0.6;
+      transform: scale(1);
+      filter: blur(10px);
+    }
+    100% {
+      opacity: 0;
+      transform: scale(1.2);
+      filter: blur(30px);
+    }
+  }
+  
+  .shadow-trail {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(3, 161, 224, 0.3), rgba(0, 255, 221, 0.3));
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+    pointer-events: none;
+  }
+
+
+/* ==========================================================================
+   Navbar Styles
+   ========================================================================== */
+
+/* Basic Navbar */
+.navbar {
+  padding: 0.5rem 1rem;
+  margin-top: -0.5rem;
+}
+
+/* Navbar Brand */
+.navbar.navbar-themed .navbar-brand {
+  margin-right: 1rem;
+  opacity: 1 !important;
+  transition: none !important;
+  font-weight: 700 !important;
+}
+
+[data-theme="dark"] .navbar.navbar-themed .navbar-brand {
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+
+[data-theme="light"] .navbar.navbar-themed .navbar-brand {
+  color: rgba(0, 0, 0, 0.85) !important;
+}
+
+.navbar.navbar-themed .navbar-brand:hover {
+  opacity: 1 !important;
+  background-color: transparent !important;
+}
+
+/* Navigation Links */
+.navbar.navbar-themed .navbar-nav .nav-item.nav-link,
+.navbar.navbar-themed .nav-link {
+  padding: 0.425rem 1rem;
+  transition: none !important;
+  opacity: 1 !important;
+  position: relative;
+}
+
+[data-theme="dark"] .navbar.navbar-themed .nav-link {
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+
+[data-theme="light"] .navbar.navbar-themed .nav-link {
+  color: rgba(0, 0, 0, 0.5) !important;
+}
+
+.navbar.navbar-themed .navbar-nav .nav-item.nav-link:hover,
+.navbar.navbar-themed .nav-link:hover {
+  opacity: 1 !important;
+  background-color: transparent !important;
+}
+
+/* Active Link */
+.navbar.navbar-themed .nav-item.nav-link.active {
+  font-weight: 700 !important;
+  box-sizing: content-box !important;
+  padding: 0.425rem 0 !important;
+  margin: 0 1rem !important;
+}
+
+[data-theme="dark"] .navbar.navbar-themed .nav-item.nav-link.active {
+  color: #fff !important;
+}
+
+[data-theme="light"] .navbar.navbar-themed .nav-item.nav-link.active {
+  color: #000 !important;
+}
+
+.navbar.navbar-themed .nav-item.nav-link.active::after {
+  content: "";
+  position: absolute;
+  bottom: 7px;
+  left: 0;
+  width: 100%;
+  height: 0.1rem;
+  background-color: #007bff !important;
+}
+
+[data-theme="dark"] .navbar.navbar-themed .nav-item.nav-link.active::after,
+[data-theme="light"] .navbar.navbar-themed .nav-item.nav-link.active::after {
+  background-color: #007bff !important;
+}
+
+/* Icon Styling */
+.navbar.navbar-themed .nav-link i {
+  font-size: 1rem;
+  color: inherit;
+  transition: color 0.3s ease;
+}
+
+/* Social & Theme Toggle Links */
+.navbar.navbar-themed .navbar-nav > div.navbar-nav .nav-link {
+  text-decoration: none !important;
+  border: none !important;
+  background: none !important;
+  position: static !important;
+}
+
+.navbar.navbar-themed .navbar-nav > div.navbar-nav .nav-link::after,
+.navbar.navbar-themed .navbar-nav > div.navbar-nav .nav-link::before {
+  display: none !important;
+  content: none !important;
+}
+
+/* LinkedIn Icon */
+.navbar.navbar-themed .nav-link .fa-linkedin {
+  transition: color 0.3s ease;
+}
+
+.navbar.navbar-themed .nav-link:hover .fa-linkedin {
+  color: #0077b5 !important;
+}
+
+/* GitHub Icon */
+.navbar.navbar-themed .nav-link .fa-github {
+  transition: color 0.3s ease;
+}
+
+[data-theme="light"] .navbar.navbar-themed .nav-link:hover .fa-github {
+  color: #333333 !important;
+}
+
+[data-theme="dark"] .navbar.navbar-themed .nav-link:hover .fa-github {
+  color: #ffffff !important;
+}
+
+/* Theme Toggle */
+.navbar.navbar-themed #theme-toggle {
+  opacity: 1 !important;
+  text-decoration: none !important;
+  border: none !important;
+  background: none !important;
+  position: static !important;
+}
+
+.navbar.navbar-themed #theme-toggle::after,
+.navbar.navbar-themed #theme-toggle::before {
+  display: none !important;
+  content: none !important;
+}
+
+[data-theme="light"] #theme-icon {
+  color: #999999;
+}
+
+[data-theme="light"] .navbar.navbar-themed #theme-toggle:hover #theme-icon {
+  color: #333333;
+}
+
+[data-theme="dark"] #theme-icon {
+  color: #666666;
+}
+
+[data-theme="dark"] .navbar.navbar-themed #theme-toggle:hover #theme-icon {
+  color: #ffd700;
+}
+
+/* Project Page GitHub Icon */
+[data-theme="dark"] a[style*="background-color: #f5f5f5"] {
+  background-color: #242424 !important;
+}
+
+[data-theme="dark"] a[style*="background-color: #f5f5f5"]:hover {
+  background-color: #4b4b4b !important;
+}
+
+[data-theme="dark"] a[style*="background-color: #f5f5f5"] i,
+[data-theme="dark"] footer a i.fa-github {
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+
+[data-theme="dark"] footer a:hover i.fa-github {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] a:hover i.fa-github {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] footer a:hover,
+footer a:hover,
+.md-content footer a:hover,
+.md-content .footer a:hover {
+  background-color: transparent !important;
+}
+
+
+/* ==========================================================================
+   Tech Section & Icons 
+   ========================================================================== */
+
+/* Tech Section Container */
+.tech-section {
+  padding: 1.5rem 0;
+  text-align: center;
+  color: var(--tech-text-color, #111);
+}
+
+/* Tech Categories */
+.tech-category {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  margin: 1.5rem 0;
+}
+
+/* Section Layout Grid */
+.tech-section-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  align-items: stretch;
+  column-gap: 3rem;
+  row-gap: 3.5rem;
+}
+
+/* Icon Grid */
+.tech-icons {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  gap: 1.5rem;
+  justify-items: center;
+  align-items: center;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Tech Item */
+.tech-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+/* Icon Image */
+.tech-item img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  opacity: 0.9;
+  transition: transform 0.5s ease-out, filter 0.5s ease-out, box-shadow 0.5s ease-out;
+}
+
+.icon-large {
+  width: 58px;
+  height: 58px;
+  opacity: 0.95;
+}
+
+/* Adjust dark mode brightness for specific icons */
+[data-theme="dark"] img[alt="NumPy"] {
+  filter: brightness(1.9) contrast(1.3);
+}
+
+/* Hover Glow + Lift */
+.tech-item:hover img {
+  transform: translateY(-3px) rotateY(2deg) scale(1.05);
+  opacity: 1;
+  filter: drop-shadow(0 0 6px rgba(103, 203, 236, 0.3))
+          drop-shadow(0 0 6px rgba(97, 153, 226, 0.3));
+}
+
+/* Subtle background glow */
+.tech-item::before {
+  content: "";
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(115, 210, 241, 0.25), rgba(110, 161, 228, 0.2));
+  filter: blur(10px);
+  opacity: 0;
+  transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.tech-item:hover::before {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1.2);
+}
+
+/* Tooltip Labels */
+.tech-name {
+  position: absolute;
+  top: 110%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.85rem;
+  color: inherit;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  max-width: 80px;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.tech-item:hover .tech-name {
+  opacity: 1;
+  transform: translate(-50%, 4px);
+}
+
+/* Dark Mode Adjustments */
+[data-theme="dark"] .tech-item img.bw {
+  filter: invert(1) brightness(1.2);
+}
+
+[data-theme="dark"] .tech-item img.color {
+  filter: none !important;
+}
+  
+/* ==========================================================================
+   Project Card Styles
+   ========================================================================== */
+
+.project.card {
+  height: 100%;
+  border-radius: 15px;
+  text-decoration: none !important;
+  margin: 10px auto;
+  display: block;
+  overflow: hidden;
+  transition: transform 400ms, box-shadow 400ms;
+}
+
+.project.card .card-img-top {
+  height: 180px;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 15px 15px 0 0;
+}
+
+.project.card .card-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.project.card .card-title {
+  min-height: 48px;
+}
+
+.project.card .card-text {
+  font-size: 0.95rem;
+}
+
+
+.project.card:hover:not(.post) {
+  transform: translateY(-8px);
+  box-shadow: -2px 8px 40px -12px rgba(0, 0, 0, 0.24);
+}
+
+/* Fix project cards breaking inside Bootstrap card-columns layout */
+.card-columns .project.card {
+  display: inline-block !important;
+  width: 100% !important;
+  break-inside: avoid;
+  page-break-inside: avoid;
+  -webkit-column-break-inside: avoid;
+}
+
+.card-columns {
+  column-gap: 1.5rem;
+}
+
+/* Markdown Link Styles */
+
+.md-link {
+  color: rgb(3, 161, 224)!important; /* Dark theme default text color */
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+.md-link:hover {
+  text-decoration: underline; /* Optional: Keep a subtle hover effect */
+  background: none !important;
+}
+
+/*-------------------------------------------
+  Carousel Controls Base Styles
+-------------------------------------------*/
+.carousel-control-prev,
+.carousel-control-next {
+    background: none !important; /* Removes dark overlay */
+    width: auto; /* Prevents extra padding */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
+
+/*-------------------------------------------
+  Carousel Arrow Icon Styles
+-------------------------------------------*/
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.7)); /* Default shadow */
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
+
+/*-------------------------------------------
+  Hover Effects for Carousel Controls
+  (Removed parent's scale to prevent double scaling)
+-------------------------------------------*/
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    animation: bounce 0.5s ease-in-out;
+    background: none !important;
+    /* Removed transform: scale(1.5) to avoid double scaling */
+}
+
+/*-------------------------------------------
+  Hover Effects for Carousel Arrow Icons
+-------------------------------------------*/
+.carousel-control-prev:hover .carousel-control-prev-icon,
+.carousel-control-next:hover .carousel-control-next-icon {
+    filter: drop-shadow(0px 0px 8px #29d6cd) drop-shadow(0px 0px 2px #008d88); /* Cyan glow plus darker outline */
+    transform: scale(1.8); /* Enlarges arrow icon */
+}
+
+/*-------------------------------------------
+  Bounce Animation
+-------------------------------------------*/
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+/*-------------------------------------------
+  Carousel Indicators Styling
+-------------------------------------------*/
+.carousel-indicators li {
+    background-color: rgba(0, 0, 0, 0.6); /* Darker dots for visibility */
+    transition: background-color 0.3s ease-in-out;
+}
+
+.carousel-indicators .active {
+    background-color: #29d6cd !important; /* Cyan color for active dot */
+}
