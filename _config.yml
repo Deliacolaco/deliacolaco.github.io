@@ -4,7 +4,7 @@ description         : >-
                       Business Analytics Graduate | Macquarie University |
                       Python, SQL, Power BI, Tableau, Excel
 baseurl             : ""            
-repository          : Deliaccolaco/deliaccolaco.github.io     
+repository          : Deliacolaco/deliacolaco.github.io     
 remote_theme        : yousinix/portfolYOU
 open_new_tab        : true                    
 
@@ -30,7 +30,7 @@ author:
 # dribbble          : your_username
   email             : dcolaco204@gmail.com
   # facebook          : your_username
-  github            : Deliaccolaco
+  github            : Deliacolaco
 # gitlab            : your_username
 # instagram         : your_username
 # kaggle            : your_username
