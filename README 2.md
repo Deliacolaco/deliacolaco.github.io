@@ -1,6 +1,6 @@
 # Portfolio
 
-This repository contains the source code for my personal portfolio website, hosted on GitHub Pages at [https://vivekdhanwada.github.io](https://vivekdhanwada.github.io).
+This repository contains the source code for my personal portfolio website, hosted on GitHub Pages at [https://deliacolaco.github.io](https://deliacolaco.github.io).
 
 The site is built with [Jekyll](https://jekyllrb.com/) and uses the [portfolYOU](https://github.com/yousinix/portfolYOU) theme. It showcases my projects, technical skills, education, and professional experience across business analytics, data visualisation, and decision support.
 
@@ -26,8 +26,7 @@ This website uses the **portfolYOU** Jekyll theme by [yousinix](https://github.c
 
 - Email: vivekchinmay@gmail.com
 - LinkedIn: https://www.linkedin.com/in/vivek-dhanwada/
-- GitHub: https://github.com/VivekDhanwada
-
+- GitHub: https://github.com/deliacolaco
 ## License
 
 This project uses the MIT License.
