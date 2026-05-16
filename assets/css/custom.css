@@ -12,7 +12,7 @@ html {
 }
 
 :root {
-  --background-color: #ffffff;
+  --background-color: #c1e8f8;
   --text-color: #000000;
   --accent-color: rgb(3, 161, 224);
   --accent-secondary: rgb(0, 255, 221);
@@ -22,7 +22,7 @@ html {
   --background-color: #121212;
   --text-color: #f1f1f1;
   --accent-color: rgb(3, 161, 224);
-  --accent-secondary: rgb(0, 255, 221);
+  --accent-secondary: rgb(237, 87, 237);
 }
 
 /* Hidden / Visible Sections */
