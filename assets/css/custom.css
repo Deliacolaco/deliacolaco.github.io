@@ -12,7 +12,7 @@ html {
 }
 
 :root {
-  --background-color: #c1e8f8;
+  --background-color: #edf9fd;
   --text-color: #000000;
   --accent-color: rgb(3, 161, 224);
   --accent-secondary: rgb(0, 255, 221);
@@ -80,7 +80,7 @@ html {
 
 /* Light Mode - Timeline Content */
 .timeline-body .timeline-item .content {
-  background: linear-gradient(to right, rgb(3, 161, 224), rgb(0, 255, 221))
+  background: linear-gradient(to right, rgb(168, 226, 248), rgb(0, 255, 221))
       left bottom no-repeat;
   border-bottom: 0px solid var(--accent-color) !important;
   background-size: 100% 2px;
@@ -682,7 +682,9 @@ p.text-center a:hover::before {
   margin-right: 1rem;
   opacity: 1 !important;
   transition: none !important;
-  font-weight: 700 !important;
+  font-family: "Times New Roman", Times, serif !important;
+  font-size: 1.45rem !important;
+  font-weight: 600 !important;
 }
 
 [data-theme="dark"] .navbar.navbar-themed .navbar-brand {
