@@ -1119,3 +1119,105 @@ footer a:hover,
 .carousel-indicators .active {
     background-color: #29d6cd !important; /* Cyan color for active dot */
 }
+
+/* ==========================================================================
+   Landing Page Layout and Theme Colour Overrides
+   ========================================================================== */
+
+body {
+  background-color: var(--background-color) !important;
+  color: var(--text-color) !important;
+}
+
+.landing-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+  min-height: 70vh;
+  width: 100%;
+}
+
+.landing-photo {
+  flex: 0 0 42%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.landing-photo .avatar-container {
+  width: 100%;
+  max-width: 420px;
+}
+
+.landing-photo img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.landing-text {
+  flex: 0 0 42%;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.landing-text .landing-subtitle {
+  text-align: left;
+  margin-top: 0;
+  max-width: 560px;
+}
+
+.landing-buttons {
+  justify-content: flex-start !important;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.home__img,
+.avatar-container img {
+  box-shadow: 0px 10px 30px rgba(3, 161, 224, 0.3),
+              0px 10px 30px rgba(0, 255, 221, 0.3) !important;
+}
+
+.btn-outline-dark.github,
+.btn-outline-dark.linkedin {
+  border-color: var(--accent-color) !important;
+  color: var(--accent-color) !important;
+}
+
+.btn-outline-dark.github i,
+.btn-outline-dark.linkedin i {
+  color: var(--accent-color) !important;
+}
+
+@media (max-width: 768px) {
+  .landing-content {
+    flex-direction: column;
+    gap: 2rem;
+    min-height: auto;
+    text-align: center;
+  }
+
+  .landing-photo,
+  .landing-text {
+    flex: 0 0 100%;
+    width: 100%;
+  }
+
+  .landing-text {
+    align-items: center;
+  }
+
+  .landing-text,
+  .landing-text .landing-subtitle {
+    text-align: center;
+  }
+
+  .landing-buttons {
+    justify-content: center !important;
+  }
+}
