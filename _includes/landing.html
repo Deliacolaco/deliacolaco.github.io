@@ -46,3 +46,65 @@
     <i class="fas fa-chevron-down"></i>
   </div>
 </div>
+
+.landing-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+  min-height: 70vh;
+}
+
+.landing-photo {
+  flex: 0 0 42%;
+  display: flex;
+  justify-content: center;
+}
+
+.landing-photo .avatar-container {
+  width: 100%;
+  max-width: 420px;
+}
+
+.landing-photo img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.landing-text {
+  flex: 0 0 42%;
+  text-align: left;
+}
+
+.landing-text .landing-subtitle {
+  text-align: left;
+}
+
+.landing-buttons {
+  flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  .landing-content {
+    flex-direction: column;
+    gap: 2rem;
+    min-height: auto;
+    text-align: center;
+  }
+
+  .landing-photo,
+  .landing-text {
+    flex: 0 0 100%;
+    width: 100%;
+  }
+
+  .landing-text,
+  .landing-text .landing-subtitle {
+    text-align: center;
+  }
+
+  .landing-buttons {
+    justify-content: center !important;
+  }
+}
