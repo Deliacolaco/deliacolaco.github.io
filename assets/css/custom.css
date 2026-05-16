@@ -12,7 +12,7 @@ html {
 }
 
 :root {
-  --background-color: #edf9fd;
+  --background-color: #ffffff;
   --text-color: #000000;
   --accent-color: rgb(3, 161, 224);
   --accent-secondary: rgb(0, 255, 221);
@@ -671,9 +671,7 @@ p.text-center a:hover::before {
   margin-right: 1rem;
   opacity: 1 !important;
   transition: none !important;
-  font-family: "Times New Roman", Times, serif !important;
-  font-size: 1.85rem !important;
-  font-weight: 600 !important;
+  font-size: 14px !important;
 }
 
 [data-theme="dark"] .navbar.navbar-themed .navbar-brand {
@@ -1111,8 +1109,9 @@ footer a:hover,
     background-color: #29d6cd !important; /* Cyan color for active dot */
 }
 
+
 /* ==========================================================================
-   Landing Page Layout and Theme Colour Overrides
+   Landing Page Reset
    ========================================================================== */
 
 body {
@@ -1120,325 +1119,75 @@ body {
   color: var(--text-color) !important;
 }
 
+.landing-split {
+  min-height: auto;
+}
+
 .landing-content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 5rem;
-  min-height: 70vh;
+  display: block;
+  min-height: auto;
   width: 100%;
+  text-align: center;
+  animation: none !important;
 }
 
-.landing-photo {
-  flex: 0 0 42%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.landing-photo .avatar-container {
-  width: 100%;
-  max-width: 420px;
-}
-
-.landing-photo img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-}
-
+.landing-photo,
 .landing-text {
-  flex: 0 0 42%;
-  text-align: left;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
+  display: block;
+  width: 100%;
+  text-align: center;
 }
 
-.landing-text .landing-subtitle {
-  text-align: left;
-  margin-top: 0;
-  max-width: 560px;
-}
-
-.landing-buttons {
-  justify-content: flex-start !important;
-  flex-direction: column !important;
-  align-items: flex-start !important;
-  gap: 1rem;
-}
-.landing-buttons .btn {
-  width: 220px;
+.landing-photo .avatar-container,
+.avatar-container {
+  width: 100%;
+  max-width: 540px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .home__img,
 .avatar-container img {
-  border: 3px solid #ffffff !important;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border: none !important;
   box-shadow: none !important;
 }
 
-.btn-outline-dark.github,
-.btn-outline-dark.linkedin {
-  border-color: var(--accent-color) !important;
-  color: var(--accent-color) !important;
-}
-
-.btn-outline-dark.github i,
-.btn-outline-dark.linkedin i {
-  color: var(--accent-color) !important;
-}
-
-@media (max-width: 768px) {
-  .landing-content {
-    flex-direction: column;
-    gap: 2rem;
-    min-height: auto;
-    text-align: center;
-  }
-
-  .landing-photo,
-  .landing-text {
-    flex: 0 0 100%;
-    width: 100%;
-  }
-
-  .landing-text {
-    align-items: center;
-  }
-
-  .landing-text,
-  .landing-text .landing-subtitle {
-    text-align: center;
-  }
-
-  .landing-buttons {
-    justify-content: center !important;
-  }
-}
-
-
-/* ==========================================================================
-   Hero Polish: Vertical Centre, Buttons, Fade-in, Typewriter
-   ========================================================================== */
-
-.landing-split {
-  min-height: calc(100vh - 80px);
-  display: flex;
-  align-items: center !important;
-}
-
-.landing-content {
-  min-height: calc(100vh - 160px);
-  animation: heroFadeIn 0.9s ease-out both;
-}
-
-@keyframes heroFadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(16px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.landing-buttons .btn {
-  width: 220px;
-  min-height: 52px;
-  border-radius: 8px !important;
-  background-color: transparent !important;
-  border-width: 1.5px !important;
-  box-shadow: none !important;
-  transform: none;
-  transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease !important;
-}
-
-.landing-buttons .btn::before {
+.avatar-container::before {
   display: none !important;
   content: none !important;
 }
 
-.landing-buttons .btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08) !important;
+.landing-subtitle {
+  font-size: 1.25rem;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 760px;
+  overflow: visible !important;
+  border-right: none !important;
+  white-space: normal !important;
+  animation: none !important;
+  line-height: 1.45;
 }
 
-[data-theme="light"] .landing-buttons .btn-outline-dark.resume,
-[data-theme="light"] .landing-buttons .btn-outline-dark.resume i {
-  color: #a81818 !important;
+.landing-buttons {
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 1.5rem !important;
+  flex-wrap: wrap;
 }
 
-[data-theme="light"] .landing-buttons .btn-outline-dark.resume {
-  border-color: #a81818 !important;
-}
-
-[data-theme="light"] .landing-buttons .btn-outline-dark.resume:hover {
-  background-color: rgba(168, 24, 24, 0.08) !important;
-  color: #a81818 !important;
-  border-color: #a81818 !important;
-}
-
-[data-theme="light"] .landing-buttons .btn-outline-dark.github,
-[data-theme="light"] .landing-buttons .btn-outline-dark.github i {
-  color: #555555 !important;
-}
-
-[data-theme="light"] .landing-buttons .btn-outline-dark.github {
-  border-color: #777777 !important;
-}
-
-[data-theme="light"] .landing-buttons .btn-outline-dark.github:hover {
-  background-color: rgba(85, 85, 85, 0.08) !important;
-  color: #555555 !important;
-  border-color: #555555 !important;
-}
-
-[data-theme="light"] .landing-buttons .btn-outline-dark.linkedin,
-[data-theme="light"] .landing-buttons .btn-outline-dark.linkedin i {
-  color: #0a66c2 !important;
-}
-
-[data-theme="light"] .landing-buttons .btn-outline-dark.linkedin {
-  border-color: #0a66c2 !important;
-}
-
-[data-theme="light"] .landing-buttons .btn-outline-dark.linkedin:hover {
-  background-color: rgba(10, 102, 194, 0.08) !important;
-  color: #0a66c2 !important;
-  border-color: #0a66c2 !important;
-}
-
-[data-theme="dark"] .landing-buttons .btn-outline-dark.resume,
-[data-theme="dark"] .landing-buttons .btn-outline-dark.resume i {
-  color: #ff8a8a !important;
-}
-
-[data-theme="dark"] .landing-buttons .btn-outline-dark.resume {
-  border-color: #ff8a8a !important;
-}
-
-[data-theme="dark"] .landing-buttons .btn-outline-dark.resume:hover {
-  background-color: rgba(255, 138, 138, 0.12) !important;
-  color: #ff8a8a !important;
-  border-color: #ff8a8a !important;
-}
-
-[data-theme="dark"] .landing-buttons .btn-outline-dark.github,
-[data-theme="dark"] .landing-buttons .btn-outline-dark.github i {
-  color: #d0d0d0 !important;
-}
-
-[data-theme="dark"] .landing-buttons .btn-outline-dark.github {
-  border-color: #d0d0d0 !important;
-}
-
-[data-theme="dark"] .landing-buttons .btn-outline-dark.github:hover {
-  background-color: rgba(208, 208, 208, 0.12) !important;
-  color: #ffffff !important;
-  border-color: #ffffff !important;
-}
-
-[data-theme="dark"] .landing-buttons .btn-outline-dark.linkedin,
-[data-theme="dark"] .landing-buttons .btn-outline-dark.linkedin i {
-  color: #7ab8f5 !important;
-}
-
-[data-theme="dark"] .landing-buttons .btn-outline-dark.linkedin {
-  border-color: #7ab8f5 !important;
-}
-
-[data-theme="dark"] .landing-buttons .btn-outline-dark.linkedin:hover {
-  background-color: rgba(122, 184, 245, 0.12) !important;
-  color: #7ab8f5 !important;
-  border-color: #7ab8f5 !important;
-}
-
- .landing-subtitle {
-   overflow: hidden;
-   border-right: 2px solid var(--accent-color);
-   white-space: nowrap;
-   animation: typewriter 2.2s steps(70, end) 0.4s both, caretBlink 0.85s step-end infinite;
-   line-height: 1.45;
- }
-
- .tagline-primary {
-   color: #4f5b61;
-   display: inline-block;
-   font-weight: 500;
- }
-
- .tagline-secondary {
-   color: #6b7479;
-   display: inline-block;
-   margin-top: 0.25rem;
- }
-
- [data-theme="dark"] .tagline-primary {
-   color: #d7e1e6;
- }
-
- [data-theme="dark"] .tagline-secondary {
-   color: #b7c2c8;
- }
-
-@keyframes typewriter {
-  from {
-    max-width: 0;
-  }
-  to {
-    max-width: 560px;
-  }
-}
-
-@keyframes caretBlink {
-  0%, 100% {
-    border-color: transparent;
-  }
-  50% {
-    border-color: var(--accent-color);
-  }
+.landing-buttons .btn {
+  width: auto !important;
 }
 
 @media (max-width: 768px) {
-  .landing-split {
-    min-height: auto;
-    align-items: flex-start !important;
-  }
-
-  .landing-content {
-    min-height: auto;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-  }
-
-  .landing-buttons .btn {
-    width: 220px !important;
-  }
-
-  .landing-subtitle {
-    white-space: normal;
-    border-right: none;
-    animation: heroFadeIn 0.9s ease-out both;
-    line-height: 1.45;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .landing-content,
-  .landing-subtitle {
-    animation: none !important;
-  }
-
-  .landing-subtitle {
-    max-width: 560px;
-    border-right: none;
-    white-space: normal;
-    line-height: 1.45;
-  }
-
-  .landing-buttons .btn {
-    transition: none !important;
+  .landing-buttons {
+    gap: 0.75rem !important;
   }
 }
