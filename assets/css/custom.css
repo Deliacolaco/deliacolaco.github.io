@@ -1191,3 +1191,242 @@ body {
     gap: 0.75rem !important;
   }
 }
+
+
+/* ==========================================================================
+   Hero Polish: vertical centering, clean buttons, fade-in, safe typewriter
+   ========================================================================== */
+
+.landing-split {
+  min-height: calc(100vh - 90px) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.landing-photo,
+.landing-text {
+  opacity: 0;
+  animation: heroFadeIn 0.85s ease-out forwards;
+}
+
+.landing-photo {
+  animation-delay: 0.05s;
+}
+
+.landing-text {
+  text-align: left !important;
+  animation-delay: 0.18s;
+}
+
+@keyframes heroFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.landing-subtitle {
+  color: #5f6970 !important;
+  text-align: left !important;
+  max-width: 560px !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  line-height: 1.45 !important;
+  overflow: hidden !important;
+  white-space: normal !important;
+  border-right: 2px solid var(--accent-color) !important;
+  animation: taglineReveal 1.8s ease-out 0.45s both, caretBlink 0.85s step-end infinite !important;
+}
+
+@keyframes taglineReveal {
+  from {
+    max-width: 0;
+  }
+  to {
+    max-width: 560px;
+  }
+}
+
+@keyframes caretBlink {
+  0%, 100% {
+    border-color: transparent;
+  }
+  50% {
+    border-color: var(--accent-color);
+  }
+}
+
+.landing-buttons {
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: flex-start !important;
+  align-items: center !important;
+  gap: 1rem !important;
+  flex-wrap: wrap !important;
+}
+
+.landing-buttons .btn,
+.landing-buttons .btn-outline-dark {
+  width: 180px !important;
+  min-height: 52px !important;
+  padding: 10px 18px !important;
+  border-radius: 8px !important;
+  border-width: 1.5px !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease !important;
+}
+
+.landing-buttons .btn::before,
+.landing-buttons .btn-outline-dark::before {
+  display: none !important;
+  content: none !important;
+}
+
+.landing-buttons .btn:hover,
+.landing-buttons .btn-outline-dark:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08) !important;
+}
+
+[data-theme="light"] .landing-buttons .resume,
+[data-theme="light"] .landing-buttons .resume i {
+  color: #b20000 !important;
+}
+
+[data-theme="light"] .landing-buttons .resume {
+  border-color: #b20000 !important;
+}
+
+[data-theme="light"] .landing-buttons .resume:hover {
+  background-color: rgba(178, 0, 0, 0.08) !important;
+  border-color: #b20000 !important;
+}
+
+[data-theme="light"] .landing-buttons .github,
+[data-theme="light"] .landing-buttons .github i {
+  color: #666666 !important;
+}
+
+[data-theme="light"] .landing-buttons .github {
+  border-color: #777777 !important;
+}
+
+[data-theme="light"] .landing-buttons .github:hover {
+  background-color: rgba(102, 102, 102, 0.08) !important;
+  border-color: #666666 !important;
+}
+
+[data-theme="light"] .landing-buttons .linkedin,
+[data-theme="light"] .landing-buttons .linkedin i {
+  color: #0077b5 !important;
+}
+
+[data-theme="light"] .landing-buttons .linkedin {
+  border-color: #0077b5 !important;
+}
+
+[data-theme="light"] .landing-buttons .linkedin:hover {
+  background-color: rgba(0, 119, 181, 0.08) !important;
+  border-color: #0077b5 !important;
+}
+
+[data-theme="dark"] .landing-subtitle {
+  color: #c8d0d5 !important;
+}
+
+[data-theme="dark"] .landing-buttons .resume,
+[data-theme="dark"] .landing-buttons .resume i {
+  color: #ff8a8a !important;
+}
+
+[data-theme="dark"] .landing-buttons .resume {
+  border-color: #ff8a8a !important;
+}
+
+[data-theme="dark"] .landing-buttons .resume:hover {
+  background-color: rgba(255, 138, 138, 0.12) !important;
+}
+
+[data-theme="dark"] .landing-buttons .github,
+[data-theme="dark"] .landing-buttons .github i {
+  color: #d0d0d0 !important;
+}
+
+[data-theme="dark"] .landing-buttons .github {
+  border-color: #d0d0d0 !important;
+}
+
+[data-theme="dark"] .landing-buttons .github:hover {
+  background-color: rgba(208, 208, 208, 0.12) !important;
+}
+
+[data-theme="dark"] .landing-buttons .linkedin,
+[data-theme="dark"] .landing-buttons .linkedin i {
+  color: #7ab8f5 !important;
+}
+
+[data-theme="dark"] .landing-buttons .linkedin {
+  border-color: #7ab8f5 !important;
+}
+
+[data-theme="dark"] .landing-buttons .linkedin:hover {
+  background-color: rgba(122, 184, 245, 0.12) !important;
+}
+
+@media (max-width: 768px) {
+  .landing-split {
+    min-height: auto !important;
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+  }
+
+  .landing-text,
+  .landing-subtitle {
+    text-align: center !important;
+  }
+
+  .landing-subtitle {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    border-right: none !important;
+    animation: heroFadeIn 0.85s ease-out forwards !important;
+  }
+
+  .landing-buttons {
+    justify-content: center !important;
+  }
+
+  .landing-buttons .btn,
+  .landing-buttons .btn-outline-dark {
+    width: 180px !important;
+    font-size: 1rem !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .landing-photo,
+  .landing-text,
+  .landing-subtitle {
+    animation: none !important;
+    opacity: 1 !important;
+  }
+
+  .landing-subtitle {
+    border-right: none !important;
+  }
+
+  .landing-buttons .btn,
+  .landing-buttons .btn-outline-dark {
+    transition: none !important;
+  }
+}
