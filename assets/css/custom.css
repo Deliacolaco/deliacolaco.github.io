@@ -12,7 +12,7 @@ html {
 }
 
 :root {
-  --background-color: #ffffff;
+  --background-color: #cee5fc;
   --text-color: #000000;
   --accent-color: rgb(3, 161, 224);
   --accent-secondary: rgb(0, 255, 221);
@@ -1609,4 +1609,41 @@ body {
   animation: none !important;
   transform: none !important;
   box-shadow: none !important;
+}
+body,
+
+[data-theme="light"] body {
+
+  background-color: #edf9fd !important;
+
+}
+
+.tagline-title {
+
+  font-weight: 700 !important;
+
+}
+
+.hero-quote {
+
+  margin: 2cm auto 0 auto;
+
+  max-width: 980px;
+
+  padding: 0 2rem;
+
+  color: #4f585e;
+
+  font-size: 1rem;
+
+  line-height: 1.7;
+
+  text-align: center;
+
+}
+
+[data-theme="dark"] .hero-quote {
+
+  color: #c8d0d5;
+
 }
