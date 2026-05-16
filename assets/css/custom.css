@@ -546,7 +546,7 @@ p.text-center a:hover::before {
     max-width: 350px;
     height: auto;
     position: relative;
-    animation: fadeInZoom 1.2s ease-out, float 5s infinite ease-in-out;
+    animation: none !important;
   }
   
 .avatar-container img {
@@ -554,10 +554,10 @@ p.text-center a:hover::before {
   max-width: 100%;
   height: auto;
   border-radius: 50%;
-  border: 3px solid #ffffff;
-  transition: transform 0.4s ease-out, filter 0.4s ease-out;
-  transform-style: preserve-3d;
-  will-change: transform;
+  border: 3px solid #ffffff !important;
+  transition: none !important;
+  transform-style: flat !important;
+  will-change: auto !important;
   position: relative;
   z-index: 2;
   animation: none !important;
@@ -620,7 +620,7 @@ p.text-center a:hover::before {
   }
   
 .avatar-container img:hover {
-  transform: scale(1.03);
+  transform: none !important;
   box-shadow: none !important;
   filter: brightness(1);
 }
@@ -1551,4 +1551,62 @@ body {
 
 .landing-text {
   transform: translate(10px, -70px) !important;
+}
+.landing-subtitle {
+
+  border-right: none !important;
+
+  animation: heroFadeIn 0.85s ease-out forwards !important;
+
+  white-space: normal !important;
+
+}
+
+.tagline-title,
+
+.tagline-skills {
+
+  display: block !important;
+
+  white-space: nowrap !important;
+
+}
+
+.tagline-title {
+
+  color: #4f585e !important;
+
+}
+
+.tagline-skills {
+
+  color: #5f6970 !important;
+
+  margin-top: 0.35rem !important;
+
+}
+
+/* Final avatar cleanup: remove bounce and add thin white frame */
+.avatar-container,
+.landing-photo .avatar-container {
+  animation: none !important;
+  transform: none !important;
+}
+
+.avatar-container img,
+.home__img,
+.landing-photo img {
+  animation: none !important;
+  transform: none !important;
+  transition: none !important;
+  border: 3px solid #ffffff !important;
+  box-shadow: none !important;
+}
+
+.avatar-container img:hover,
+.home__img:hover,
+.landing-photo img:hover {
+  animation: none !important;
+  transform: none !important;
+  box-shadow: none !important;
 }
