@@ -1545,3 +1545,10 @@ body {
     max-width: 100% !important;
   }
 }
+.landing-photo {
+  transform: translate(-30px, -80px) !important;
+}
+
+.landing-text {
+  transform: translate(10px, -70px) !important;
+}
