@@ -1198,7 +1198,7 @@ body {
    ========================================================================== */
 
 .landing-split {
-  min-height: calc(100vh - 90px) !important;
+  min-height: 68vh !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
@@ -1626,7 +1626,8 @@ body,
 
 .hero-quote {
 
-  margin: -0.5cm auto 0 auto;
+  margin: -2.8cm auto 0 auto;
+}
 
   max-width: 980px;
 
