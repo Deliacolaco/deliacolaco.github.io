@@ -16,7 +16,7 @@ This portfolio is designed to present selected projects, tools, and experience i
 - Project showcase with selected analytics and dashboard work
 - About section covering education, experience, skills, and tools
 - Links to GitHub, LinkedIn, and resume
-- Custom styling layered over the portfolYOU theme
+- Custom styling layered over the portfolYOU theme 
 
 ## Theme
 
