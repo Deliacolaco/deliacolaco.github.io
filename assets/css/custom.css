@@ -1648,3 +1648,44 @@ body,
   color: #c8d0d5;
 
 }
+[data-theme="dark"],
+
+[data-theme="dark"] body {
+
+  background-color: #121212 !important;
+
+  color: #f1f1f1 !important;
+
+}
+
+[data-theme="dark"] .navbar,
+
+[data-theme="dark"] .navbar-themed {
+
+  background-color: #121212 !important;
+
+}
+
+[data-theme="dark"] .landing-subtitle,
+
+[data-theme="dark"] .tagline-title,
+
+[data-theme="dark"] .tagline-skills,
+
+[data-theme="dark"] .hero-quote {
+
+  color: #c8d0d5 !important;
+
+}
+
+[data-theme="dark"] .navbar-brand {
+
+  color: #f1f1f1 !important;
+
+}
+
+[data-theme="dark"] .nav-link {
+
+  color: rgba(255, 255, 255, 0.65) !important;
+
+}
