@@ -1430,3 +1430,118 @@ body {
     transition: none !important;
   }
 }
+
+/* ==========================================================================
+   Final Hero Positioning Override: smaller image, left profile, right links
+   ========================================================================== */
+
+.landing-split {
+  min-height: calc(100vh - 90px) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 2.5rem !important;
+  padding-top: 1rem !important;
+  padding-bottom: 1rem !important;
+}
+
+.landing-photo {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: flex-start !important;
+  width: auto !important;
+  text-align: center !important;
+  transform: translate(-30px, -25px) !important;
+}
+
+.landing-photo .avatar-container,
+.avatar-container {
+  width: 100% !important;
+  max-width: 360px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.landing-photo img,
+.home__img,
+.avatar-container img {
+  width: 100% !important;
+  max-width: 360px !important;
+  height: auto !important;
+  border-radius: 50% !important;
+  object-fit: cover !important;
+}
+
+.landing-text {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: flex-start !important;
+  text-align: left !important;
+  width: auto !important;
+  transform: translate(10px, -15px) !important;
+}
+
+.landing-subtitle {
+  text-align: left !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  max-width: 500px !important;
+  font-size: 1.35rem !important;
+  line-height: 1.45 !important;
+}
+
+.landing-buttons {
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: flex-start !important;
+  align-items: center !important;
+  gap: 1rem !important;
+  flex-wrap: wrap !important;
+  max-width: 390px !important;
+}
+
+.landing-buttons .btn,
+.landing-buttons .btn-outline-dark {
+  width: 180px !important;
+}
+
+.scroll-down {
+  margin-top: 0 !important;
+}
+
+@media (max-width: 768px) {
+  .landing-split {
+    min-height: auto !important;
+    gap: 1.5rem !important;
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+  }
+
+  .landing-photo,
+  .landing-text {
+    transform: none !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  .landing-photo .avatar-container,
+  .avatar-container,
+  .landing-photo img,
+  .home__img,
+  .avatar-container img {
+    max-width: 300px !important;
+  }
+
+  .landing-subtitle {
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    font-size: 1.15rem !important;
+  }
+
+  .landing-buttons {
+    justify-content: center !important;
+    max-width: 100% !important;
+  }
+}
