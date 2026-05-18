@@ -1647,8 +1647,395 @@ body,
   align-items: flex-start !important;
 }
 
+
 .skill-card:has(img[alt="Qlik Sense"]) .skill-card-content {
   flex: 1 !important;
   align-items: flex-start !important;
   text-align: left !important;
+}
+
+/* ==========================================================================
+   Background Left-Rail Timeline
+   ========================================================================== */
+
+.background-section {
+  margin-top: 4rem;
+  margin-bottom: 3rem;
+}
+
+.background-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2.75rem;
+}
+
+.background-section-header::before,
+.background-section-header::after {
+  content: "";
+  height: 1px;
+  flex: 1;
+  max-width: 260px;
+  background: linear-gradient(to right, transparent, rgba(160, 160, 180, 0.75));
+}
+
+.background-section-header::after {
+  background: linear-gradient(to right, rgba(160, 160, 180, 0.75), transparent);
+}
+
+.background-section-header span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.55rem 1.45rem;
+  border-radius: 999px;
+  border: 1px solid rgba(160, 160, 180, 0.65);
+  background: #ffffff;
+  color: #2d2d4a;
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+}
+
+.left-rail-timeline {
+  position: relative;
+  max-width: 980px;
+  margin: 0 auto;
+  padding-left: 28px;
+}
+
+.left-rail-timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 2.5px;
+  border-radius: 999px;
+  background: #c8c8dc;
+}
+
+.timeline-year-marker {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  margin: 0 0 1.15rem 0;
+}
+
+.timeline-year-marker span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 72px;
+  padding: 0.32rem 0.85rem;
+  border-radius: 999px;
+  background: #3a3a5c;
+  color: #ffffff;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.11em;
+  line-height: 1;
+}
+
+.timeline-year-marker::after {
+  content: "";
+  height: 1px;
+  flex: 1;
+  background: linear-gradient(to right, rgba(58, 58, 92, 0.45), transparent);
+}
+
+.timeline-card {
+  --timeline-color: #5c6bc0;
+  position: relative;
+  margin: 0 0 1.5rem 0;
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 8px 24px rgba(35, 35, 70, 0.08);
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.timeline-card:hover {
+  transform: translateX(3px);
+  box-shadow: 0 12px 30px rgba(35, 35, 70, 0.14);
+}
+
+.timeline-internship {
+  --timeline-color: #5c6bc0;
+}
+
+.timeline-volunteer {
+  --timeline-color: #26a69a;
+}
+
+.timeline-education-master {
+  --timeline-color: #ef6c00;
+}
+
+.timeline-leadership {
+  --timeline-color: #e91e8c;
+}
+
+.timeline-education-bachelor {
+  --timeline-color: #8d6e63;
+}
+
+.timeline-dot {
+  position: absolute;
+  top: 1.15rem;
+  left: -36px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--timeline-color);
+  border: 3px solid #ffffff;
+  box-shadow: 0 0 0 5px color-mix(in srgb, var(--timeline-color) 25%, transparent),
+              0 0 16px color-mix(in srgb, var(--timeline-color) 50%, transparent);
+  z-index: 2;
+}
+
+.timeline-card-accent {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 6px;
+  border-radius: 3px 0 0 3px;
+  background: linear-gradient(to bottom, var(--timeline-color), color-mix(in srgb, var(--timeline-color) 60%, transparent));
+}
+
+.timeline-card-inner {
+  padding: 1.2rem 1.35rem 1.2rem 1.55rem;
+}
+
+.timeline-card-top {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 1.2rem;
+  align-items: start;
+}
+
+.timeline-title-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.55rem;
+  margin-bottom: 0.35rem;
+}
+
+.timeline-title-row h3 {
+  margin: 0;
+  color: #111111;
+  font-size: 1.05rem;
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+.timeline-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  padding: 0.22rem 0.55rem;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--timeline-color) 10%, transparent);
+  color: var(--timeline-color);
+  font-size: 0.66rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  line-height: 1.2;
+}
+
+.timeline-date-block {
+  text-align: right;
+  white-space: nowrap;
+}
+
+.timeline-date-block span {
+  display: block;
+  color: #777777;
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.timeline-date-block em {
+  display: block;
+  margin-top: 0.18rem;
+  color: #aaaaaa;
+  font-size: 0.76rem;
+  font-style: italic;
+}
+
+.timeline-meta-org {
+  color: #333333;
+  font-size: 0.9rem;
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+.timeline-meta-location {
+  margin-top: 0.1rem;
+  color: #888888;
+  font-size: 0.82rem;
+  line-height: 1.45;
+}
+
+.timeline-score-pill {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  margin-top: 0.45rem;
+  padding: 0.22rem 0.6rem;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--timeline-color) 12%, transparent);
+  color: var(--timeline-color);
+  border: 1px solid color-mix(in srgb, var(--timeline-color) 35%, transparent);
+  font-size: 0.72rem;
+  font-weight: 800;
+}
+
+.timeline-divider {
+  height: 1px;
+  margin: 1rem 0;
+  background: color-mix(in srgb, var(--timeline-color) 28%, transparent);
+}
+
+.timeline-bullets {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.65rem 1.2rem;
+}
+
+.timeline-bullets-two {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.timeline-bullets li {
+  position: relative;
+  padding-left: 1rem;
+  color: #4a4a6a;
+  font-size: 0.83rem;
+  line-height: 1.5;
+}
+
+.timeline-bullets li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--timeline-color);
+}
+
+.timeline-chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid color-mix(in srgb, var(--timeline-color) 28%, transparent);
+}
+
+.timeline-chip-row span {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.26rem 0.65rem;
+  border-radius: 999px;
+  border: 1px solid color-mix(in srgb, var(--timeline-color) 45%, transparent);
+  background: color-mix(in srgb, var(--timeline-color) 9%, transparent);
+  color: var(--timeline-color);
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+[data-theme="dark"] .background-section-header span {
+  background: #1f1f1f;
+  border-color: rgba(255, 255, 255, 0.14);
+  color: #f1f1f1;
+}
+
+[data-theme="dark"] .background-section-header::before,
+[data-theme="dark"] .background-section-header::after {
+  opacity: 0.45;
+}
+
+[data-theme="dark"] .left-rail-timeline::before {
+  background: rgba(255, 255, 255, 0.18);
+}
+
+[data-theme="dark"] .timeline-card {
+  background: rgba(255, 255, 255, 0.04);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.26);
+}
+
+[data-theme="dark"] .timeline-card:hover {
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.34);
+}
+
+[data-theme="dark"] .timeline-title-row h3 {
+  color: #f4f4f4;
+}
+
+[data-theme="dark"] .timeline-meta-org {
+  color: #dddddd;
+}
+
+[data-theme="dark"] .timeline-meta-location,
+[data-theme="dark"] .timeline-date-block span {
+  color: #aaaaaa;
+}
+
+[data-theme="dark"] .timeline-date-block em {
+  color: #888888;
+}
+
+[data-theme="dark"] .timeline-bullets li {
+  color: #c8d0d5;
+}
+
+@media (max-width: 768px) {
+  .background-section {
+    margin-top: 3rem;
+  }
+
+  .background-section-header {
+    margin-bottom: 2rem;
+  }
+
+  .background-section-header::before,
+  .background-section-header::after {
+    max-width: 90px;
+  }
+
+  .left-rail-timeline {
+    padding-left: 22px;
+  }
+
+  .timeline-dot {
+    left: -30px;
+  }
+
+  .timeline-card-inner {
+    padding: 1.05rem 1rem 1.05rem 1.25rem;
+  }
+
+  .timeline-card-top {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .timeline-date-block {
+    text-align: left;
+  }
+
+  .timeline-bullets-two {
+    grid-template-columns: 1fr;
+  }
 }
