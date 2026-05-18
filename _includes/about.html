@@ -20,102 +20,281 @@
 {% endif %}
 
 {% if page.url == '/about/' %}
-<h1 style="margin-bottom: 2rem;">Tech Stack Usage Across Projects</h1>
-{% include skills.html %}
+<h1 style="margin-bottom: 2rem;">Skills &amp; Tools</h1>
 
-<div class="tech-section-grid">
+<div class="tech-section-grid skills-tools-grid">
 
   <!-- Programming Languages -->
-  <div class="tech-category">
+  <div class="tech-category skills-category">
     <h2>Programming Languages</h2>
-    <div class="tech-icons">
-      <div class="tech-item"><img src="/assets/Icons/python.svg" alt="Python"><div class="tech-name">Python</div></div>
-      <div class="tech-item"><img src="/assets/Icons/postgresql.svg" alt="SQL"><div class="tech-name">SQL</div></div>
-      <div class="tech-item"><img src="/assets/Icons/r.svg" alt="R"><div class="tech-name">R</div></div>
+    <div class="skill-card-list">
+      <div class="skill-card">
+        <img src="/assets/Icons/python.svg" alt="Python">
+        <div class="skill-card-content">
+          <div class="skill-name">Python</div>
+          <div class="skill-level level-proficient">PROFICIENT</div>
+          <div class="skill-description">Used for data cleaning, exploratory analysis, modelling, and academic analytics projects.</div>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <img src="/assets/Icons/postgresql.svg" alt="SQL">
+        <div class="skill-card-content">
+          <div class="skill-name">SQL</div>
+          <div class="skill-level level-proficient">PROFICIENT</div>
+          <div class="skill-description">Used to query, join, filter, and structure relational datasets for reporting and analysis.</div>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <img src="/assets/Icons/r.svg" alt="R">
+        <div class="skill-card-content">
+          <div class="skill-name">R</div>
+          <div class="skill-level level-familiar">FAMILIAR</div>
+          <div class="skill-description">Used in academic analysis projects for statistical exploration, reporting, and visualisation.</div>
+        </div>
+      </div>
     </div>
-    <p class="category-desc">
-      My go‑to languages for building data pipelines, dashboards, and models.
-    </p>
   </div>
 
   <!-- Data & Modelling Libraries -->
-  <div class="tech-category">
-    <h2>Data & Modelling Libraries</h2>
-    <div class="tech-icons">
-      <div class="tech-item"><img src="/assets/Icons/pandas.svg" alt="Pandas"><div class="tech-name">Pandas</div></div>
-      <div class="tech-item"><img src="/assets/Icons/numpy.svg" alt="NumPy"><div class="tech-name">NumPy</div></div>
-      <div class="tech-item"><img src="/assets/Icons/matplotlib.svg" alt="Matplotlib"><div class="tech-name">Matplotlib</div></div>
-      <div class="tech-item"><img src="/assets/Icons/scikitlearn.svg" alt="Scikit-learn"><div class="tech-name">Scikit‑learn</div></div>
-      <div class="tech-item"><img src="/assets/Icons/mongodb.svg" alt="MongoDB"><div class="tech-name">MongoDB</div></div>
+  <div class="tech-category skills-category">
+    <h2>Data &amp; Modelling Libraries</h2>
+    <div class="skill-card-list">
+      <div class="skill-card">
+        <img src="/assets/Icons/pandas.svg" alt="Pandas">
+        <div class="skill-card-content">
+          <div class="skill-name">Pandas</div>
+          <div class="skill-level level-proficient">PROFICIENT</div>
+          <div class="skill-description">Used to clean, transform, merge, and analyse structured data in Python workflows.</div>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <img src="/assets/Icons/numpy.svg" alt="NumPy">
+        <div class="skill-card-content">
+          <div class="skill-name">NumPy</div>
+          <div class="skill-level level-proficient">PROFICIENT</div>
+          <div class="skill-description">Used for numerical calculations, array handling, and supporting modelling tasks.</div>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <img src="/assets/Icons/matplotlib.svg" alt="Matplotlib">
+        <div class="skill-card-content">
+          <div class="skill-name">Matplotlib</div>
+          <div class="skill-level level-proficient">PROFICIENT</div>
+          <div class="skill-description">Used to create charts for exploratory analysis, reports, and project communication.</div>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <img src="/assets/Icons/scikitlearn.svg" alt="Scikit-learn">
+        <div class="skill-card-content">
+          <div class="skill-name">Scikit-learn</div>
+          <div class="skill-level level-proficient">PROFICIENT</div>
+          <div class="skill-description">Used for clustering, segmentation, preprocessing, and evaluating analytical models.</div>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <img src="/assets/Icons/mongodb.svg" alt="MongoDB">
+        <div class="skill-card-content">
+          <div class="skill-name">MongoDB</div>
+          <div class="skill-level level-familiar">FAMILIAR</div>
+          <div class="skill-description">Used to understand document-based data structures and non-relational database concepts.</div>
+        </div>
+      </div>
     </div>
-    <p class="category-desc">
-      Libraries for data manipulation, modelling, and analysis in Python or MongoDB.
-    </p>
   </div>
 
   <!-- Visualisation Tools -->
-  <div class="tech-category">
+  <div class="tech-category skills-category">
     <h2>Visualisation Tools</h2>
-    <div class="tech-icons">
-      <div class="tech-item"><img src="/assets/Icons/tableau.svg" alt="Tableau" class="bw"><div class="tech-name">Tableau</div></div>
-      <div class="tech-item"><img src="/assets/Icons/powerbi.svg" alt="Power BI"><div class="tech-name">Power BI</div></div>
-      <div class="tech-item"><img src="/assets/Icons/looker.svg" alt="Looker Studio"><div class="tech-name">Looker Studio</div></div>
-      <div class="tech-item"><img src="/assets/Icons/excel.svg" alt="Excel"><div class="tech-name">Excel</div></div>
-      <div class="tech-item"><img src="/assets/Icons/googlesheets.svg" alt="Google Sheets"><div class="tech-name">Google Sheets</div></div>
-      <!-- <div class="tech-item"><img src="/assets/Icons/qlik.svg" alt="Qlik Sense" class="icon-large"><div class="tech-name">Qlik Sense</div></div> -->
-    </div>
-    <p class="category-desc">
-      Tools for creating interactive dashboards, reports, and visual stories.
-    </p>
-  </div>
+    <div class="skill-card-list">
+      <div class="skill-card">
+        <img src="/assets/Icons/powerbi.svg" alt="Power BI">
+        <div class="skill-card-content">
+          <div class="skill-name">Power BI</div>
+          <div class="skill-level level-proficient">PROFICIENT</div>
+          <div class="skill-description">Used to build interactive dashboards and translate datasets into business insights.</div>
+        </div>
+      </div>
 
-  <!-- Development Tools -->
-  <div class="tech-category">
-    <h2>Development Tools</h2>
-    <div class="tech-icons">
-      <div class="tech-item"><img src="/assets/Icons/studio3t.svg" alt="Studio 3T" class="bw"><div class="tech-name">Studio 3T</div></div>
-      <div class="tech-item"><img src="/assets/Icons/jupyter.svg" alt="Jupyter Notebook"><div class="tech-name">Jupyter</div></div>
-      <div class="tech-item"><img src="/assets/Icons/googlecolab.svg" alt="Google Colab"><div class="tech-name">Colab</div></div>
-      <div class="tech-item"><img src="/assets/Icons/vscode.svg" alt="VS Code"><div class="tech-name">VS Code</div></div>
-      <div class="tech-item"><img src="/assets/Icons/git.svg" alt="Git"><div class="tech-name">Git</div></div>
-      <div class="tech-item"><img src="/assets/Icons/rstudioide.svg" alt="RStudio" class="bw"><div class="tech-name">RStudio</div></div>
-      <div class="tech-item"><img src="/assets/Icons/kaggle.svg" alt="Kaggle" class="icon-large"><div class="tech-name">Kaggle</div></div>
-    </div>
-    <p class="category-desc">
-      Everyday tools for writing, testing, and collaborating on analytics workflows.
-    </p>
-  </div>
+      <div class="skill-card">
+        <img src="/assets/Icons/tableau.svg" alt="Tableau">
+        <div class="skill-card-content">
+          <div class="skill-name">Tableau</div>
+          <div class="skill-level level-proficient">PROFICIENT</div>
+          <div class="skill-description">Used to design dashboards and explore customer, sales, and business patterns visually.</div>
+        </div>
+      </div>
 
-  <!-- Productivity Tools -->
-  <div class="tech-category">
-    <h2>Productivity Tools</h2>
-    <div class="tech-icons">
-      <div class="tech-item"><img src="/assets/Icons/googleworkspace.svg" alt="Google Workspace"><div class="tech-name">Workspace</div></div>
-      <div class="tech-item"><img src="/assets/Icons/office.svg" alt="Microsoft Office"><div class="tech-name">Office</div></div>
-      <div class="tech-item"><img src="/assets/Icons/canva.svg" alt="Canva"><div class="tech-name">Canva</div></div>
-      <div class="tech-item"><img src="/assets/Icons/trello.svg" alt="Trello"><div class="tech-name">Trello</div></div>
-      <div class="tech-item"><img src="/assets/Icons/notion.svg" alt="Notion" class="bw"><div class="tech-name">Notion</div></div>
-      <div class="tech-item"><img src="/assets/Icons/clickup.svg" alt="ClickUp" class="bw"><div class="tech-name">ClickUp</div></div>
+      <div class="skill-card">
+        <img src="/assets/Icons/excel.svg" alt="Excel">
+        <div class="skill-card-content">
+          <div class="skill-name">Excel</div>
+          <div class="skill-level level-advanced">ADVANCED</div>
+          <div class="skill-description">Used for analysis, reporting, tracking, and practical business decision support.</div>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <img src="/assets/Icons/googlesheets.svg" alt="Google Sheets">
+        <div class="skill-card-content">
+          <div class="skill-name">Google Sheets</div>
+          <div class="skill-level level-advanced">ADVANCED</div>
+          <div class="skill-description">Used to build data collection tools, automated checks, trackers, and documentation.</div>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <img src="/assets/Icons/looker.svg" alt="Looker Studio">
+        <div class="skill-card-content">
+          <div class="skill-name">Looker Studio</div>
+          <div class="skill-level level-familiar">FAMILIAR</div>
+          <div class="skill-description">Used to structure dashboard views for web, campaign, and performance reporting.</div>
+        </div>
+      </div>
     </div>
-    <p class="category-desc">
-      Tools that keep my work organised, collaborative, and visually sharp.
-    </p>
   </div>
 
   <!-- Analytics & Marketing Platforms -->
-  <div class="tech-category">
-    <h2>Analytics & Marketing Platforms</h2>
-    <div class="tech-icons">
-      <div class="tech-item"><img src="/assets/Icons/googleanalytics.svg" alt="Google Analytics"><div class="tech-name">GA4</div></div>
-      <div class="tech-item"><img src="/assets/Icons/googletagmanager.svg" alt="Google Tag Manager"><div class="tech-name">Tag Manager</div></div>
-      <div class="tech-item"><img src="/assets/Icons/hubspot.svg" alt="HubSpot"><div class="tech-name">HubSpot</div></div>
+  <div class="tech-category skills-category">
+    <h2>Analytics &amp; Marketing Platforms</h2>
+    <div class="skill-card-list">
+      <div class="skill-card">
+        <img src="/assets/Icons/googleanalytics.svg" alt="Google Analytics 4">
+        <div class="skill-card-content">
+          <div class="skill-name">GA4</div>
+          <div class="skill-level level-proficient">PROFICIENT</div>
+          <div class="skill-description">Used to review traffic sources, user behaviour, and campaign performance for reporting.</div>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <img src="/assets/Icons/googletagmanager.svg" alt="Google Tag Manager">
+        <div class="skill-card-content">
+          <div class="skill-name">Google Tag Manager</div>
+          <div class="skill-level level-familiar">FAMILIAR</div>
+          <div class="skill-description">Used to understand tracking setup and how campaign activity becomes measurable.</div>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <img src="/assets/Icons/hubspot.svg" alt="HubSpot">
+        <div class="skill-card-content">
+          <div class="skill-name">HubSpot</div>
+          <div class="skill-level level-familiar">FAMILIAR</div>
+          <div class="skill-description">Used in CRM and marketing contexts to support outreach and lifecycle communication.</div>
+        </div>
+      </div>
     </div>
-    <p class="category-desc">
-      Platforms for tracking, tagging, and optimising campaigns and web analytics.
-    </p>
   </div>
 
+  <!-- Development Tools -->
+  <div class="tech-category skills-category">
+    <h2>Development Tools</h2>
+    <div class="skill-card-list">
+      <div class="skill-card">
+        <img src="/assets/Icons/jupyter.svg" alt="Jupyter Notebook">
+        <div class="skill-card-content">
+          <div class="skill-name">Jupyter Notebook</div>
+          <div class="skill-level level-proficient">PROFICIENT</div>
+          <div class="skill-description">Used to document Python analysis, modelling steps, charts, and interpretation.</div>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <img src="/assets/Icons/vscode.svg" alt="VS Code">
+        <div class="skill-card-content">
+          <div class="skill-name">VS Code</div>
+          <div class="skill-level level-proficient">PROFICIENT</div>
+          <div class="skill-description">Used for editing code, managing website files, and working across project repositories.</div>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <img src="/assets/Icons/git.svg" alt="Git">
+        <div class="skill-card-content">
+          <div class="skill-name">Git</div>
+          <div class="skill-level level-familiar">FAMILIAR</div>
+          <div class="skill-description">Used for version control, committing website changes, and managing project updates.</div>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <img src="/assets/Icons/rstudioide.svg" alt="RStudio">
+        <div class="skill-card-content">
+          <div class="skill-name">RStudio</div>
+          <div class="skill-level level-familiar">FAMILIAR</div>
+          <div class="skill-description">Used for R-based academic analysis, reporting, and visualisation tasks.</div>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <img src="/assets/Icons/googlecolab.svg" alt="Google Colab">
+        <div class="skill-card-content">
+          <div class="skill-name">Google Colab</div>
+          <div class="skill-level level-familiar">FAMILIAR</div>
+          <div class="skill-description">Used for browser-based Python experimentation and shared analytical notebooks.</div>
+        </div>
+      </div>
+    </div>
   </div>
+
+  <!-- Productivity & Collaboration -->
+  <div class="tech-category skills-category">
+    <h2>Productivity &amp; Collaboration</h2>
+    <div class="skill-card-list">
+      <div class="skill-card">
+        <img src="/assets/Icons/googleworkspace.svg" alt="Google Workspace">
+        <div class="skill-card-content">
+          <div class="skill-name">Google Workspace</div>
+          <div class="skill-level level-advanced">ADVANCED</div>
+          <div class="skill-description">Used to coordinate documents, trackers, reporting files, and collaborative workflows.</div>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <img src="/assets/Icons/office.svg" alt="Microsoft Office">
+        <div class="skill-card-content">
+          <div class="skill-name">Microsoft Office</div>
+          <div class="skill-level level-advanced">ADVANCED</div>
+          <div class="skill-description">Used for reporting, documentation, presentations, spreadsheets, and stakeholder outputs.</div>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <img src="/assets/Icons/canva.svg" alt="Canva">
+        <div class="skill-card-content">
+          <div class="skill-name">Canva</div>
+          <div class="skill-level level-proficient">PROFICIENT</div>
+          <div class="skill-description">Used to create presentation visuals, simple communication assets, and project materials.</div>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <img src="/assets/Icons/trello.svg" alt="Trello">
+        <div class="skill-card-content">
+          <div class="skill-name">Trello</div>
+          <div class="skill-level level-familiar">FAMILIAR</div>
+          <div class="skill-description">Used to organise tasks, project steps, and timelines in collaborative work.</div>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <img src="/assets/Icons/notion.svg" alt="Notion">
+        <div class="skill-card-content">
+          <div class="skill-name">Notion</div>
+          <div class="skill-level level-familiar">FAMILIAR</div>
+          <div class="skill-description">Used to organise notes, research, project information, and structured documentation.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
 
   <h1 style="margin-top: 3rem; margin-bottom: 2rem;">Timeline</h1>
   <div class="row">
