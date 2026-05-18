@@ -1116,9 +1116,13 @@ footer a:hover,
    ========================================================================== */
 
 body,
+
 [data-theme="light"] body {
-  background-color: #edf9fd !important;
-  color: #000000 !important;
+
+  background-color: var(--background-color) !important;
+
+  color: var(--text-color) !important;
+
 }
 
 .landing-split {
@@ -1429,30 +1433,45 @@ body,
     animation: none !important;
   }
 }
-.navbar-brand,
+.navbar.navbar-themed .navbar-brand:hover {
 
-.navbar .navbar-brand,
+  opacity: 1 !important;
 
-.navbar a.navbar-brand,
+  background-color: transparent !important;
 
-a.navbar-brand {
+}
+/* Navbar Logo */
+.navbar-logo {
+  height: 42px !important;
+  width: auto !important;
+  display: block !important;
+  object-fit: contain !important;
+}
 
+.logo-link {
+  display: flex !important;
+  align-items: center !important;
+  text-decoration: none !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.logo-link:hover,
+.logo-link:focus {
+  text-decoration: none !important;
+  background-color: transparent !important;
+}
+
+.logo-link::after,
+.logo-link::before {
   display: none !important;
+  content: none !important;
+}
 
-  visibility: hidden !important;
-
-  opacity: 0 !important;
-
-  width: 0 !important;
-
-  max-width: 0 !important;
-
-  overflow: hidden !important;
-
-  padding: 0 !important;
-
-  margin: 0 !important;
-
+@media (max-width: 768px) {
+  .navbar-logo {
+    height: 36px !important;
+  }
 }
 
 /* ==========================================================================
