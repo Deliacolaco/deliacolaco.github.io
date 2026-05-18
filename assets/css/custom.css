@@ -1286,8 +1286,8 @@ body,
 
 .hero-quote {
   margin: -2.2cm auto 0 auto !important;
-  max-width: 980px !important;
-  padding: 0 2rem !important;
+  max-width: 1040px !important;
+  padding: 0 !important;
   color: #111111 !important;
   font-size: 1rem !important;
   line-height: 1.55 !important;
@@ -1432,13 +1432,6 @@ body,
     transition: none !important;
     animation: none !important;
   }
-}
-.navbar.navbar-themed .navbar-brand:hover {
-
-  opacity: 1 !important;
-
-  background-color: transparent !important;
-
 }
 /* Navbar Logo */
 .navbar-logo {
