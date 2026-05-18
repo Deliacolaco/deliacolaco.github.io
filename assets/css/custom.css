@@ -1110,168 +1110,146 @@ footer a:hover,
 }
 
 
-/* ==========================================================================
-   Landing Page Reset
-   ========================================================================== */
-
-body {
-  background-color: var(--background-color) !important;
-  color: var(--text-color) !important;
-}
-
-.landing-split {
-  min-height: auto;
-}
-
-.landing-content {
-  display: block;
-  min-height: auto;
-  width: 100%;
-  text-align: center;
-  animation: none !important;
-}
-
-.landing-photo,
-.landing-text {
-  display: block;
-  width: 100%;
-  text-align: center;
-}
-
-.landing-photo .avatar-container,
-.avatar-container {
-  width: 100%;
-  max-width: 540px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.home__img,
-.avatar-container img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  border: none !important;
-  box-shadow: none !important;
-}
-
-.avatar-container::before {
-  display: none !important;
-  content: none !important;
-}
-
-.landing-subtitle {
-  font-size: 1.25rem;
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 760px;
-  overflow: visible !important;
-  border-right: none !important;
-  white-space: normal !important;
-  animation: none !important;
-  line-height: 1.45;
-}
-
-.landing-buttons {
-  display: flex !important;
-  flex-direction: row !important;
-  justify-content: center !important;
-  align-items: center !important;
-  gap: 1.5rem !important;
-  flex-wrap: wrap;
-}
-
-.landing-buttons .btn {
-  width: auto !important;
-}
-
-@media (max-width: 768px) {
-  .landing-buttons {
-    gap: 0.75rem !important;
-  }
-}
-
 
 /* ==========================================================================
-   Hero Polish: vertical centering, clean buttons, fade-in, safe typewriter
+   Final Homepage Hero Layout
    ========================================================================== */
+
+body,
+[data-theme="light"] body {
+  background-color: #edf9fd !important;
+  color: #000000 !important;
+}
 
 .landing-split {
   min-height: 68vh !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
-}
-
-.landing-photo,
-.landing-text {
-  opacity: 0;
-  animation: heroFadeIn 0.85s ease-out forwards;
+  gap: 2.5rem !important;
+  padding-top: 1rem !important;
+  padding-bottom: 1rem !important;
 }
 
 .landing-photo {
-  animation-delay: 0.05s;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  width: auto !important;
+  text-align: center !important;
+  transform: translate(-30px, -35px) !important;
+  opacity: 1 !important;
+  animation: none !important;
+}
+
+.profile-block {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.profile-name {
+  margin-top: 1rem !important;
+  font-size: 1.25rem !important;
+  font-weight: 700 !important;
+  color: #111111 !important;
+  text-align: center !important;
+}
+
+.landing-photo .avatar-container,
+.avatar-container {
+  width: 100% !important;
+  max-width: 255px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  animation: none !important;
+  transform: none !important;
+}
+
+.landing-photo img,
+.home__img,
+.avatar-container img {
+  width: 100% !important;
+  max-width: 255px !important;
+  height: auto !important;
+  border-radius: 50% !important;
+  object-fit: cover !important;
+  border: 3px solid #ffffff !important;
+  box-shadow: none !important;
+  animation: none !important;
+  transform: none !important;
+  transition: none !important;
+}
+
+.avatar-container::before,
+.avatar-container:hover::before {
+  display: none !important;
+  content: none !important;
+}
+
+.avatar-container img:hover,
+.home__img:hover,
+.landing-photo img:hover {
+  animation: none !important;
+  transform: none !important;
+  box-shadow: none !important;
 }
 
 .landing-text {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: flex-start !important;
   text-align: left !important;
-  animation-delay: 0.18s;
-}
-
-@keyframes heroFadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(14px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  width: auto !important;
+  transform: translate(10px, -35px) !important;
+  opacity: 1 !important;
+  animation: none !important;
 }
 
 .landing-subtitle {
   color: #5f6970 !important;
   text-align: left !important;
-  max-width: 560px !important;
-  margin-left: 0 !important;
-  margin-right: 0 !important;
+  margin: 0 0 2rem 0 !important;
+  max-width: 620px !important;
+  font-size: 1.35rem !important;
   line-height: 1.45 !important;
-  overflow: hidden !important;
+  overflow: visible !important;
   white-space: normal !important;
-  border-right: 2px solid var(--accent-color) !important;
-  animation: taglineReveal 1.8s ease-out 0.45s both, caretBlink 0.85s step-end infinite !important;
+  border-right: none !important;
+  animation: none !important;
 }
 
-@keyframes taglineReveal {
-  from {
-    max-width: 0;
-  }
-  to {
-    max-width: 560px;
-  }
+.tagline-title,
+.tagline-skills {
+  display: block !important;
+  white-space: nowrap !important;
 }
 
-@keyframes caretBlink {
-  0%, 100% {
-    border-color: transparent;
-  }
-  50% {
-    border-color: var(--accent-color);
-  }
+.tagline-title {
+  color: #4f585e !important;
+  font-weight: 700 !important;
+}
+
+.tagline-skills {
+  color: #5f6970 !important;
+  margin-top: 0.35rem !important;
 }
 
 .landing-buttons {
   display: flex !important;
-  flex-direction: row !important;
+  flex-direction: column !important;
   justify-content: flex-start !important;
-  align-items: center !important;
+  align-items: flex-start !important;
   gap: 1rem !important;
-  flex-wrap: wrap !important;
+  flex-wrap: nowrap !important;
+  margin-top: 0 !important;
 }
 
 .landing-buttons .btn,
-.landing-buttons .btn-outline-dark {
+.landing-buttons .btn-outline-dark,
+.landing-buttons .hero-button {
   width: 180px !important;
   min-height: 52px !important;
   padding: 10px 18px !important;
@@ -1283,65 +1261,68 @@ body {
   align-items: center !important;
   justify-content: center !important;
   gap: 8px !important;
+  font-size: 1rem !important;
+  font-weight: 500 !important;
   transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease !important;
 }
 
 .landing-buttons .btn::before,
-.landing-buttons .btn-outline-dark::before {
+.landing-buttons .btn-outline-dark::before,
+.landing-buttons .hero-button::before {
   display: none !important;
   content: none !important;
 }
 
 .landing-buttons .btn:hover,
-.landing-buttons .btn-outline-dark:hover {
+.landing-buttons .btn-outline-dark:hover,
+.landing-buttons .hero-button:hover {
   transform: translateY(-2px) !important;
   box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08) !important;
 }
 
-[data-theme="light"] .landing-buttons .resume,
-[data-theme="light"] .landing-buttons .resume i {
-  color: #b20000 !important;
+.hero-quote {
+  margin: -2.2cm auto 0 auto !important;
+  max-width: 980px !important;
+  padding: 0 2rem !important;
+  color: #111111 !important;
+  font-size: 1rem !important;
+  line-height: 1.55 !important;
+  text-align: left !important;
 }
 
-[data-theme="light"] .landing-buttons .resume {
-  border-color: #b20000 !important;
+.scroll-down {
+  margin-top: 1.2rem !important;
+  animation: bounce 3s ease-in-out infinite;
 }
 
-[data-theme="light"] .landing-buttons .resume:hover {
-  background-color: rgba(178, 0, 0, 0.08) !important;
-  border-color: #b20000 !important;
+[data-theme="dark"],
+[data-theme="dark"] body {
+  background-color: #121212 !important;
+  color: #f1f1f1 !important;
 }
 
-[data-theme="light"] .landing-buttons .github,
-[data-theme="light"] .landing-buttons .github i {
-  color: #666666 !important;
+[data-theme="dark"] .navbar,
+[data-theme="dark"] .navbar-themed {
+  background-color: #121212 !important;
 }
 
-[data-theme="light"] .landing-buttons .github {
-  border-color: #777777 !important;
+[data-theme="dark"] .profile-name {
+  color: #f1f1f1 !important;
 }
 
-[data-theme="light"] .landing-buttons .github:hover {
-  background-color: rgba(102, 102, 102, 0.08) !important;
-  border-color: #666666 !important;
-}
-
-[data-theme="light"] .landing-buttons .linkedin,
-[data-theme="light"] .landing-buttons .linkedin i {
-  color: #0077b5 !important;
-}
-
-[data-theme="light"] .landing-buttons .linkedin {
-  border-color: #0077b5 !important;
-}
-
-[data-theme="light"] .landing-buttons .linkedin:hover {
-  background-color: rgba(0, 119, 181, 0.08) !important;
-  border-color: #0077b5 !important;
-}
-
-[data-theme="dark"] .landing-subtitle {
+[data-theme="dark"] .landing-subtitle,
+[data-theme="dark"] .tagline-title,
+[data-theme="dark"] .tagline-skills,
+[data-theme="dark"] .hero-quote {
   color: #c8d0d5 !important;
+}
+
+[data-theme="dark"] .navbar-brand {
+  color: #f1f1f1 !important;
+}
+
+[data-theme="dark"] .nav-link {
+  color: rgba(255, 255, 255, 0.65) !important;
 }
 
 [data-theme="dark"] .landing-buttons .resume,
@@ -1386,133 +1367,6 @@ body {
 @media (max-width: 768px) {
   .landing-split {
     min-height: auto !important;
-    padding-top: 2rem !important;
-    padding-bottom: 2rem !important;
-  }
-
-  .landing-text,
-  .landing-subtitle {
-    text-align: center !important;
-  }
-
-  .landing-subtitle {
-    margin-left: auto !important;
-    margin-right: auto !important;
-    border-right: none !important;
-    animation: heroFadeIn 0.85s ease-out forwards !important;
-  }
-
-  .landing-buttons {
-    justify-content: center !important;
-  }
-
-  .landing-buttons .btn,
-  .landing-buttons .btn-outline-dark {
-    width: 180px !important;
-    font-size: 1rem !important;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .landing-photo,
-  .landing-text,
-  .landing-subtitle {
-    animation: none !important;
-    opacity: 1 !important;
-  }
-
-  .landing-subtitle {
-    border-right: none !important;
-  }
-
-  .landing-buttons .btn,
-  .landing-buttons .btn-outline-dark {
-    transition: none !important;
-  }
-}
-
-/* ==========================================================================
-   Final Hero Positioning Override: smaller image, left profile, right links
-   ========================================================================== */
-
-.landing-split {
-  min-height: calc(100vh - 90px) !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  gap: 2.5rem !important;
-  padding-top: 1rem !important;
-  padding-bottom: 1rem !important;
-}
-
-.landing-photo {
-  display: flex !important;
-  justify-content: center !important;
-  align-items: flex-start !important;
-  width: auto !important;
-  text-align: center !important;
-  transform: translate(-30px, -25px) !important;
-}
-
-.landing-photo .avatar-container,
-.avatar-container {
-  width: 100% !important;
-  max-width: 360px !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
-}
-
-.landing-photo img,
-.home__img,
-.avatar-container img {
-  width: 100% !important;
-  max-width: 360px !important;
-  height: auto !important;
-  border-radius: 50% !important;
-  object-fit: cover !important;
-}
-
-.landing-text {
-  display: flex !important;
-  flex-direction: column !important;
-  justify-content: center !important;
-  align-items: flex-start !important;
-  text-align: left !important;
-  width: auto !important;
-  transform: translate(10px, -15px) !important;
-}
-
-.landing-subtitle {
-  text-align: left !important;
-  margin-left: 0 !important;
-  margin-right: 0 !important;
-  max-width: 500px !important;
-  font-size: 1.35rem !important;
-  line-height: 1.45 !important;
-}
-
-.landing-buttons {
-  display: flex !important;
-  flex-direction: row !important;
-  justify-content: flex-start !important;
-  align-items: center !important;
-  gap: 1rem !important;
-  flex-wrap: wrap !important;
-  max-width: 390px !important;
-}
-
-.landing-buttons .btn,
-.landing-buttons .btn-outline-dark {
-  width: 180px !important;
-}
-
-.scroll-down {
-  margin-top: 0 !important;
-}
-
-@media (max-width: 768px) {
-  .landing-split {
-    min-height: auto !important;
     gap: 1.5rem !important;
     padding-top: 2rem !important;
     padding-bottom: 2rem !important;
@@ -1530,7 +1384,11 @@ body {
   .landing-photo img,
   .home__img,
   .avatar-container img {
-    max-width: 300px !important;
+    max-width: 240px !important;
+  }
+
+  .profile-name {
+    font-size: 1.1rem !important;
   }
 
   .landing-subtitle {
@@ -1540,152 +1398,34 @@ body {
     font-size: 1.15rem !important;
   }
 
+  .tagline-title,
+  .tagline-skills {
+    white-space: normal !important;
+  }
+
   .landing-buttons {
-    justify-content: center !important;
-    max-width: 100% !important;
+    align-items: center !important;
+  }
+
+  .landing-buttons .btn,
+  .landing-buttons .btn-outline-dark,
+  .landing-buttons .hero-button {
+    width: 180px !important;
+  }
+
+  .hero-quote {
+    margin: 1.5rem auto 0 auto !important;
+    text-align: center !important;
+    padding: 0 1.25rem !important;
   }
 }
-.landing-photo {
-  transform: translate(-30px, -80px) !important;
-}
 
-.landing-text {
-  transform: translate(10px, -70px) !important;
-}
-.landing-subtitle {
-
-  border-right: none !important;
-
-  animation: heroFadeIn 0.85s ease-out forwards !important;
-
-  white-space: normal !important;
-
-}
-
-.tagline-title,
-
-.tagline-skills {
-
-  display: block !important;
-
-  white-space: nowrap !important;
-
-}
-
-.tagline-title {
-
-  color: #4f585e !important;
-
-}
-
-.tagline-skills {
-
-  color: #5f6970 !important;
-
-  margin-top: 0.35rem !important;
-
-}
-
-/* Final avatar cleanup: remove bounce and add thin white frame */
-.avatar-container,
-.landing-photo .avatar-container {
-  animation: none !important;
-  transform: none !important;
-}
-
-.avatar-container img,
-.home__img,
-.landing-photo img {
-  animation: none !important;
-  transform: none !important;
-  transition: none !important;
-  border: 3px solid #ffffff !important;
-  box-shadow: none !important;
-}
-
-.avatar-container img:hover,
-.home__img:hover,
-.landing-photo img:hover {
-  animation: none !important;
-  transform: none !important;
-  box-shadow: none !important;
-}
-body,
-
-[data-theme="light"] body {
-
-  background-color: #edf9fd !important;
-
-}
-
-.tagline-title {
-
-  font-weight: 700 !important;
-
-}
-
-.hero-quote {
-
-  margin: -3.5cm auto 0 auto;
-}
-
-  max-width: 980px;
-
-  padding: 0 2rem;
-
-  color: #4f585e;
-
-  font-size: 1rem;
-
-  line-height: 1.7;
-
-  text-align: center;
-
-}
-
-[data-theme="dark"] .hero-quote {
-
-  color: #c8d0d5;
-
-}
-[data-theme="dark"],
-
-[data-theme="dark"] body {
-
-  background-color: #121212 !important;
-
-  color: #f1f1f1 !important;
-
-}
-
-[data-theme="dark"] .navbar,
-
-[data-theme="dark"] .navbar-themed {
-
-  background-color: #121212 !important;
-
-}
-
-[data-theme="dark"] .landing-subtitle,
-
-[data-theme="dark"] .tagline-title,
-
-[data-theme="dark"] .tagline-skills,
-
-[data-theme="dark"] .hero-quote {
-
-  color: #c8d0d5 !important;
-
-}
-
-[data-theme="dark"] .navbar-brand {
-
-  color: #f1f1f1 !important;
-
-}
-
-[data-theme="dark"] .nav-link {
-
-  color: rgba(255, 255, 255, 0.65) !important;
-
+@media (prefers-reduced-motion: reduce) {
+  .landing-buttons .btn,
+  .landing-buttons .btn-outline-dark,
+  .landing-buttons .hero-button,
+  .scroll-down {
+    transition: none !important;
+    animation: none !important;
+  }
 }
