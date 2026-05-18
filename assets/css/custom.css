@@ -1618,3 +1618,25 @@ a.navbar-brand {
     min-width: 34px !important;
   }
 }
+
+/* Fix Qlik Sense card alignment so it matches other skill cards */
+.skill-card img[alt="Qlik Sense"] {
+  width: 38px !important;
+  height: 38px !important;
+  min-width: 38px !important;
+  max-width: 38px !important;
+  object-fit: contain !important;
+  object-position: center !important;
+  margin-top: 0.1rem !important;
+  display: block !important;
+}
+
+.skill-card:has(img[alt="Qlik Sense"]) {
+  align-items: flex-start !important;
+}
+
+.skill-card:has(img[alt="Qlik Sense"]) .skill-card-content {
+  flex: 1 !important;
+  align-items: flex-start !important;
+  text-align: left !important;
+}
