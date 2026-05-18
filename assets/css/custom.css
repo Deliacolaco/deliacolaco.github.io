@@ -1429,3 +1429,28 @@ body,
     animation: none !important;
   }
 }
+.navbar-brand,
+
+.navbar .navbar-brand,
+
+.navbar a.navbar-brand,
+
+a.navbar-brand {
+
+  display: none !important;
+
+  visibility: hidden !important;
+
+  opacity: 0 !important;
+
+  width: 0 !important;
+
+  max-width: 0 !important;
+
+  overflow: hidden !important;
+
+  padding: 0 !important;
+
+  margin: 0 !important;
+
+}
