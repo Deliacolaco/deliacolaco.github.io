@@ -1762,24 +1762,50 @@ body,
   box-shadow: 0 12px 30px rgba(35, 35, 70, 0.14);
 }
 
+.timeline-education {
+
+  --timeline-color: #3f7ddc;
+
+}
+
+.timeline-certification {
+
+  --timeline-color: #2eaf7d;
+
+}
+
+.timeline-work {
+
+  --timeline-color: #26a69a;
+
+}
+
 .timeline-internship {
-  --timeline-color: #5c6bc0;
+
+  --timeline-color: #ef9b20;
+
 }
 
 .timeline-volunteer {
-  --timeline-color: #26a69a;
-}
 
-.timeline-education-master {
-  --timeline-color: #ef6c00;
+  --timeline-color: #e91e8c;
+
 }
 
 .timeline-leadership {
-  --timeline-color: #e91e8c;
+
+  --timeline-color: #7e57c2;
+
 }
 
-.timeline-education-bachelor {
-  --timeline-color: #8d6e63;
+.timeline-placeholder {
+
+  --timeline-color: #8a8a8a;
+
+  opacity: 0.78;
+
+  border: 1px dashed rgba(138, 138, 138, 0.55);
+
 }
 
 .timeline-dot {
