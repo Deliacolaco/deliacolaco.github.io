@@ -1482,6 +1482,30 @@ body,
   }
 }
 
+html {
+
+    scroll-padding-top: 82px;
+
+  }
+
+  #about,
+
+  #projects,
+
+  #portfolio,
+
+  .background-section,
+
+  .tech-section,
+
+  .hidden-section,
+
+  .visible-section {
+
+    scroll-margin-top: 82px;
+
+  }
+
 /* ==========================================================================
    Skills & Tools Unified Card Section
    ========================================================================== */
