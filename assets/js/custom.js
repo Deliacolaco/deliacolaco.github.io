@@ -2,14 +2,16 @@
  * Smoothly scroll to the About section.
  */
 function scrollToAbout() {
-    const aboutSection = document.getElementById("about");
-    if (aboutSection) {
-      window.scrollTo({
-        top: aboutSection.offsetTop - 20,
-        behavior: "smooth",
-      });
-    }
+  const aboutSection = document.getElementById("about");
+  const navbar = document.querySelector("nav.navbar");
+  const navbarHeight = navbar ? navbar.offsetHeight : 0;
+  if (aboutSection) {
+    window.scrollTo({
+      top: aboutSection.offsetTop - navbarHeight - 20,
+      behavior: "smooth",
+    });
   }
+}
   
   /**
    * Toggle theme between dark and light.
