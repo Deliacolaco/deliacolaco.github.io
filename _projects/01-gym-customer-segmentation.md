@@ -8,7 +8,7 @@ url: /projects/gym-customer-segmentation/
 
 # Gym Customer Segmentation
 
-This project used Python clustering techniques to segment 2,000 gym members into meaningful customer groups. The goal was to help a gym chain better understand its customer base and design more targeted marketing strategies.
+This project applied K-Means and Agglomerative clustering in Python to segment 2,000 gym members into three actionable customer profiles, enabling targeted marketing strategies for a gym chain
 
 Tools used: Python, Pandas, Scikit-learn, Matplotlib — K-Means and Agglomerative Clustering
 
