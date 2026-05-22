@@ -21,17 +21,11 @@ A gym chain lacked visibility into customer differences, making it difficult to 
 After cleaning and scaling the data, I used the Elbow Method and Silhouette Analysis to determine the optimal number of clusters. I then applied K-Means clustering as the primary method and Agglomerative clustering for validation. Each segment was profiled across demographic and behavioural features to support business interpretation.
 
 ## Key Findings
-
-The analysis identified three customer segments:
-
 1. Youthful, Economically-Conscious Individuals — younger members with price sensitivity; highest churn risk
 2. Wealthy Metropolitan Executives — high income, low visit frequency; receptive to premium add-ons
 3. Knowledgeable Suburban Adults — consistent, family-oriented members; strongest retention base
 
 ## Business Recommendations
-
-Each segment was matched with targeted marketing actions:
-
 - Segment 1: Digital-first, budget membership tiers and referral incentives to improve retention
 - Segment 2: Premium wellness packages and off-peak executive services to increase visit frequency
 - Segment 3: Family and community membership bundles to deepen loyalty
