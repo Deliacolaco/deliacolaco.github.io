@@ -2,7 +2,7 @@
 name: Gym Customer Segmentation
 tools: Python, Pandas, Scikit-learn, Matplotlib, Clustering
 image: /assets/img/projects/gym-customer-segmentation.png
-description: Segmented 2,000 gym members using clustering techniques to identify meaningful customer groups and support targeted marketing recommendations.
+description: Segmented 2,000 gym members into 3 distinct customer profiles using K-Means++ clustering in Python, delivering targeted marketing strategies for each segment.
 url: /projects/gym-customer-segmentation/
 ---
 # Gym Customer Segmentation
