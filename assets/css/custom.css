@@ -2115,3 +2115,52 @@ body,
     grid-template-columns: 1fr;
   }
 }
+
+/* Project card layout fix */
+#projects .row,
+#featured-projects .row {
+  justify-content: center;
+  row-gap: 2.5rem;
+}
+
+.project.card,
+.card.project,
+a.project {
+  height: 100%;
+}
+
+.project.card .card-img-top,
+.card.project .card-img-top,
+.project-card img,
+.card-img-top {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  object-position: top center;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.card-title {
+  min-height: 3.2rem;
+}
+
+.card-text {
+  flex-grow: 1;
+}
+
+.card-body p:last-child,
+.card-body .badge-container {
+  margin-top: auto;
+}
+
+.badge,
+.badge-pill {
+  white-space: normal;
+  line-height: 1.2;
+  margin-bottom: 0.25rem;
+}
