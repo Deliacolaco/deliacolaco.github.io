@@ -2116,51 +2116,94 @@ body,
   }
 }
 
-/* Project card layout fix */
+/* ==========================================================================
+   Project Card Layout Fix
+   ========================================================================== */
+
 #projects .row,
 #featured-projects .row {
-  justify-content: center;
-  row-gap: 2.5rem;
+  justify-content: center !important;
+  row-gap: 2.5rem !important;
 }
 
-.project.card,
-.card.project,
-a.project {
-  height: 100%;
+#projects .col-lg-4,
+#projects .col-md-6,
+#featured-projects .col-lg-4,
+#featured-projects .col-md-6 {
+  display: flex !important;
+  margin-bottom: 2rem !important;
 }
 
-.project.card .card-img-top,
-.card.project .card-img-top,
-.project-card img,
-.card-img-top {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-  object-position: top center;
+#projects .project.card,
+#featured-projects .project.card {
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 430px !important;
+  display: flex !important;
+  flex-direction: column !important;
 }
 
-.card-body {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
+#projects .project.card .card-img-top,
+#featured-projects .project.card .card-img-top {
+  width: 100% !important;
+  height: 185px !important;
+  object-fit: cover !important;
+  object-position: top center !important;
+  flex-shrink: 0 !important;
+  border-radius: 15px 15px 0 0 !important;
 }
 
-.card-title {
-  min-height: 3.2rem;
+#projects .project.card .card-body,
+#featured-projects .project.card .card-body {
+  display: flex !important;
+  flex-direction: column !important;
+  flex: 1 1 auto !important;
+  padding: 1.25rem !important;
 }
 
-.card-text {
-  flex-grow: 1;
+#projects .project.card .card-title,
+#featured-projects .project.card .card-title {
+  min-height: 3.2rem !important;
+  margin-bottom: 0.85rem !important;
 }
 
-.card-body p:last-child,
-.card-body .badge-container {
-  margin-top: auto;
+#projects .project.card .card-text,
+#featured-projects .project.card .card-text {
+  flex-grow: 1 !important;
+  margin-bottom: 1rem !important;
 }
 
-.badge,
-.badge-pill {
-  white-space: normal;
-  line-height: 1.2;
-  margin-bottom: 0.25rem;
+#projects .project.card p[id$="-tools"],
+#featured-projects .project.card p[id$="-tools"] {
+  margin-top: auto !important;
+  margin-bottom: 0 !important;
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 0.25rem !important;
+}
+
+#projects .project.card .badge,
+#projects .project.card .badge-pill,
+#featured-projects .project.card .badge,
+#featured-projects .project.card .badge-pill {
+  white-space: normal !important;
+  line-height: 1.2 !important;
+  margin-bottom: 0.25rem !important;
+  max-width: 100% !important;
+}
+
+.card-columns .project.card {
+  min-height: 430px !important;
+}
+
+@media (max-width: 768px) {
+  #projects .project.card,
+  #featured-projects .project.card {
+    min-height: auto !important;
+  }
+
+  #projects .project.card .card-img-top,
+  #featured-projects .project.card .card-img-top {
+    height: 170px !important;
+  }
 }
