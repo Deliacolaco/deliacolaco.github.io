@@ -6,7 +6,7 @@ description: Built an executive Qlik Sense dashboard and contributed to predicti
 url: /projects/student-retention-analytics-mqu/
 ---
 
-# Student Retention Analytics — Macquarie University
+# Student Retention Analytics, Macquarie University
 
 Macquarie University · BUSA8031 – Business Analytics Project · 2025
 
