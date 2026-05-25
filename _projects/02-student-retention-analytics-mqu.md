@@ -1,5 +1,5 @@
 ---
-name: Student Retention Analytics — Macquarie University
+name: Student Retention Analytics, Macquarie University
 tools: Qlik Sense, Python, Pandas, Scikit-learn, XGBoost, Dashboarding
 image: /assets/img/projects/student-retention-analytics-mqu.png
 description: Built an executive Qlik Sense dashboard and contributed to predictive modelling to analyse student retention, progression, equity outcomes, and attrition risk across Macquarie University.
