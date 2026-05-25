@@ -36,7 +36,7 @@ html {
 }
 
 :root {
-  --background-color: #d9f6f5;
+  --background-color: #daebf8;
   --text-color: #000000;
   --accent-color: rgb(3, 161, 224);
   --accent-secondary: rgb(0, 255, 221);
@@ -1282,11 +1282,8 @@ body,
   letter-spacing: 0.01em !important;
   display: inline-block !important;
   width: 0;
-  max-width: 39ch;
-  overflow: hidden !important;
-  white-space: nowrap !important;
-  border-right: 2px solid var(--accent-color) !important;
-  animation: typingSkills 3.2s steps(39, end) forwards, blinkCursor 0.8s infinite !important;
+  max-width: 42ch;
+  animation: typingSkills 3.2s steps(42, end) forwards !important;
 }
 
 .landing-buttons {
