@@ -97,6 +97,9 @@ Mid-career, family-oriented members with consistent attendance and strong retent
 ---
 
 ## Project Files
-- [`report/`](report/) — Full project report (PDF)
-- [`code/`](code/) — Python notebook (.ipynb)
-- [`assets/`](assets/) — Visual outputs and screenshots
+
+- [View Full Project Report (PDF)](https://github.com/Deliaccolaco/data-analytics-projects/raw/main/gym-customer-segmentation/report.pdf)
+
+- [View Python Notebook](https://github.com/Deliaccolaco/data-analytics-projects/blob/main/gym-customer-segmentation/code/gym_customer_segmentation.ipynb)
+
+- [View GitHub Project Folder](https://github.com/Deliaccolaco/data-analytics-projects/tree/main/gym-customer-segmentation)
