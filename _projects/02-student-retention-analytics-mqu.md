@@ -97,7 +97,7 @@ For University Executives:
 
 ## Project Files
 
-- [View Report PDF](https://github.com/Deliaccolaco/data-analytics-projects/blob/main/student-retention-analytics-mqu/report.pdf)
+- [View Report PDF](https://github.com/Deliaccolaco/data-analytics-projects/raw/main/student-retention-analytics-mqu/report.pdf)
 - [View GitHub Project Folder](https://github.com/Deliaccolaco/data-analytics-projects/tree/main/student-retention-analytics-mqu)
 - [View Dashboard](https://23cen6dozz61syg.ap.qlikcloud.com/sense/app/9b261911-3aea-4951-99d3-3e603903742e/overview)
 
