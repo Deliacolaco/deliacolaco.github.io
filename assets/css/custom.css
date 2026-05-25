@@ -2415,3 +2415,42 @@ body,
   display: none !important;
 
 }
+
+/* Force Featured Projects and Projects page cards to match */
+#featured-projects .project.card,
+#projects .project.card,
+.project.card {
+  min-height: 500px !important;
+  height: 100% !important;
+}
+
+#featured-projects .project.card .card-img-top,
+#projects .project.card .card-img-top,
+.project.card .card-img-top {
+  height: 190px !important;
+  width: 100% !important;
+  object-fit: contain !important;
+  object-position: center !important;
+  background: #ffffff !important;
+  padding: 0.5rem !important;
+}
+
+#featured-projects .project.card .card-body,
+#projects .project.card .card-body,
+.project.card .card-body {
+  min-height: 300px !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+#featured-projects .project.card .card-text,
+#projects .project.card .card-text,
+.project.card .card-text {
+  flex-grow: 1 !important;
+}
+
+#featured-projects .project.card p[id$="-tools"],
+#projects .project.card p[id$="-tools"],
+.project.card p[id$="-tools"] {
+  margin-top: auto !important;
+}
