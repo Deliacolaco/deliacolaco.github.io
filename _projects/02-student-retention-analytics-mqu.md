@@ -34,7 +34,7 @@ The data existed, but it was spread across systems. Trends often got noticed too
 
 ---
 
-## My Contribution — Dashboard 2
+## My Contribution : Dashboard 2
 
 I built Dashboard 2 in Qlik Sense for University Executives. The goal was to give senior leaders one place they could go for retention insight, ready to use in strategy meetings, funding reviews, and policy conversations.
 
