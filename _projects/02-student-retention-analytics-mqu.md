@@ -56,6 +56,7 @@ The dashboard covers:
 
 Two things stood out once the dashboard was in front of executives: the **2025 retention plateau** after four years of steady growth, and the **equity gap closing from 68% to 74%**. Both were findings that previously sat buried in long annual reports.
 
+
 ### Design choices and why
 
 | Design choice | Reason |
@@ -69,7 +70,6 @@ Two things stood out once the dashboard was in front of executives: the **2025 r
 | Filters by attendance mode and student type | Lets executives check whether trends hold up across delivery modes and across domestic vs international students. Headline numbers often hide differences between these groups. |
 
 | WAM trend shown alongside retention | If retention drops while WAM holds steady, the issue is engagement, not academic difficulty. The two need different responses. |
-
 ---
 
 ## Dataset
