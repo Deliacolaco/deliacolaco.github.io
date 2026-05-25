@@ -20,7 +20,7 @@ html {
     width: 0;
   }
   to {
-    width: 39ch;
+    width: 42ch;
   }
 }
 
@@ -1275,15 +1275,29 @@ body,
 }
 
 .tagline-skills {
+
   color: #6f7a82 !important;
+
   margin-top: 0.35rem !important;
+
   font-weight: 400 !important;
+
   font-size: 1.22rem !important;
+
   letter-spacing: 0.01em !important;
+
   display: inline-block !important;
+
   width: 0;
+
   max-width: 42ch;
+
+  overflow: hidden !important;
+
+  white-space: nowrap !important;
+
   animation: typingSkills 3.2s steps(42, end) forwards !important;
+
 }
 
 .landing-buttons {
