@@ -60,17 +60,11 @@ Two things stood out once the dashboard was in front of executives: the **2025 r
 ### Design choices and why
 
 | Design choice | Reason |
-
 |---|---|
-
 | Faculty-level comparison, not cohort-level | Executives plan by faculty, not by cohort. Cohort-level views are more useful for Course Directors, so they sit in Dashboard 1. |
-
 | Equity vs non-equity split as a core view | Equity is one of the university's strategic priorities. Putting the gap front and centre means it gets discussed, not skimmed past. |
-
 | Filters by attendance mode and student type | Lets executives check whether trends hold up across delivery modes and across domestic vs international students. Headline numbers often hide differences between these groups. |
-
 | WAM trend shown alongside retention | If retention drops while WAM holds steady, the issue is engagement, not academic difficulty. The two need different responses. |
----
 
 ## Dataset
 
