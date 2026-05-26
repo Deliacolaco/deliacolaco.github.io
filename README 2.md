@@ -58,8 +58,8 @@ Live site: [https://deliacolaco.github.io](https://deliacolaco.github.io)
 
 ## Contact
 
-- GitHub: [https://github.com/Deliacolaco](https://github.com/Deliacolaco)
-- LinkedIn: [https://www.linkedin.com/in/delia-colaco](https://www.linkedin.com/in/delia-colaco)
+- GitHub: <a href="https://github.com/Deliacolaco" target="_blank">https://github.com/Deliacolaco</a>
+- LinkedIn: <a href="https://www.linkedin.com/in/deliacolaco/" target="_blank">https://www.linkedin.com/in/deliacolaco/</a>
 
 ## License
 
