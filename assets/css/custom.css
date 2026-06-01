@@ -2841,3 +2841,84 @@ body,
   outline: none !important;
   box-shadow: none !important;
 }
+/* ==========================================================================
+   Final Homepage Hero + Navbar Overrides
+   ========================================================================== */
+
+.hero-title {
+  font-family: "Cormorant Garamond", serif !important;
+  font-size: clamp(4rem, 7vw, 6rem) !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.02em !important;
+  line-height: 0.95 !important;
+  color: #ffffff !important;
+}
+
+.hero-accent {
+  width: 95px !important;
+  height: 3px !important;
+  background: rgba(255, 255, 255, 0.42) !important;
+}
+
+.hero-description {
+  max-width: 760px !important;
+  font-size: clamp(1.2rem, 2vw, 1.5rem) !important;
+}
+
+.hero-skills {
+  margin-bottom: 1.65rem !important;
+}
+
+.hero-card-btn {
+  min-width: 132px !important;
+  min-height: 44px !important;
+  padding: 0.58rem 1.2rem !important;
+}
+
+.navbar,
+.navbar.navbar-themed {
+  width: 100vw !important;
+  max-width: 100vw !important;
+  margin-left: calc(50% - 50vw) !important;
+  margin-right: calc(50% - 50vw) !important;
+  padding: 0 !important;
+  background: #12100f !important;
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 1100 !important;
+}
+
+.navbar > .container,
+.navbar > .container-fluid,
+.navbar-inner {
+  max-width: 980px !important;
+  width: 100% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: 1.5rem !important;
+  padding-right: 1.5rem !important;
+}
+
+.navbar-logo {
+  filter: brightness(0) invert(1) !important;
+  opacity: 1 !important;
+}
+
+#theme-toggle,
+#theme-icon {
+  display: none !important;
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: clamp(3rem, 12vw, 4.5rem) !important;
+  }
+
+  .navbar > .container,
+  .navbar > .container-fluid,
+  .navbar-inner {
+    max-width: 100% !important;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+}
