@@ -2629,7 +2629,7 @@ body,
 .hero-section .scroll-down {
   position: absolute !important;
   left: 50% !important;
-  bottom: 3.5rem !important;
+  bottom: 5.5rem !important;
   transform: translateX(-50%) !important;
   margin: 0 !important;
   z-index: 2 !important;
