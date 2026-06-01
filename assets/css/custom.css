@@ -2933,3 +2933,74 @@ body,
   transform: none !important;
   pointer-events: auto !important;
 }
+
+
+/* ==========================================================================
+   Post-Hero Section Visibility + Spacing Fix
+   Ensures Projects/About sections appear normally after the homepage hero
+   ========================================================================== */
+
+main,
+.container,
+.container-fluid,
+#portfolio,
+#about,
+#projects,
+#featured-projects,
+.background-section,
+.tech-section,
+.hidden-section,
+.visible-section {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: none !important;
+  pointer-events: auto !important;
+}
+
+#portfolio,
+#about,
+#projects,
+#featured-projects,
+.background-section,
+.tech-section {
+  min-height: auto !important;
+  margin-top: 0 !important;
+  margin-bottom: 3rem !important;
+  padding-top: 3rem !important;
+  padding-bottom: 3rem !important;
+  background-color: #ffffff !important;
+  color: #111111 !important;
+}
+
+#featured-projects .row,
+#projects .row,
+.card-columns {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  justify-content: center !important;
+  align-items: stretch !important;
+  gap: 2rem !important;
+  column-count: unset !important;
+}
+
+#featured-projects .col-lg-4,
+#featured-projects .col-md-6,
+#projects .col-lg-4,
+#projects .col-md-6 {
+  display: flex !important;
+}
+
+#featured-projects .project.card,
+#projects .project.card,
+.project.card {
+  opacity: 1 !important;
+  visibility: visible !important;
+  display: flex !important;
+}
+
+#about + #projects,
+#about + #featured-projects,
+.visible-section + .visible-section,
+.hidden-section + .hidden-section {
+  margin-top: 0 !important;
+}
