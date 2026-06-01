@@ -2794,3 +2794,34 @@ body,
   display: none !important;
   content: none !important;
 }
+
+/* Remove dark/light toggle */
+#theme-toggle,
+#theme-icon {
+  display: none !important;
+}
+
+/* Fix navbar spacing after removing toggle */
+.navbar,
+.navbar.navbar-themed {
+  width: 100vw !important;
+  max-width: 100vw !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background: #12100f !important;
+}
+
+.navbar > .container,
+.navbar > .container-fluid {
+  max-width: 100% !important;
+  width: 100% !important;
+  padding-left: 14rem !important;
+  padding-right: 14rem !important;
+}
+
+/* Remove blue focus box */
+.navbar a:focus,
+.navbar button:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
