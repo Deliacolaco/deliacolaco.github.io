@@ -2940,9 +2940,6 @@ body,
    Ensures Projects/About sections appear normally after the homepage hero
    ========================================================================== */
 
-main,
-.container,
-.container-fluid,
 #portfolio,
 #about,
 #projects,
