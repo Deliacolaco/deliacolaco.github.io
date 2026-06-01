@@ -2770,7 +2770,7 @@ body {
 
 body,
 [data-theme="light"] body {
-  background-color: #0f0e0d !important;
+  background-color: #ffffff !important;
 }
 
 .navbar,
@@ -2921,4 +2921,15 @@ body,
     padding-left: 1rem !important;
     padding-right: 1rem !important;
   }
+}
+.hero-section,
+.hero-overlay {
+  background-color: transparent !important;
+}
+
+.hidden-section,
+.visible-section {
+  opacity: 1 !important;
+  transform: none !important;
+  pointer-events: auto !important;
 }
