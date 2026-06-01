@@ -2706,3 +2706,39 @@ body,
     animation: none !important;
   }
 }
+/* ==========================================================================
+   Hero Navbar Overlay Fix
+   Removes the light-blue navbar band above the homepage hero
+   ========================================================================== */
+
+.navbar,
+.navbar.navbar-themed {
+  background: rgba(18, 16, 15, 0.92) !important;
+  min-height: 64px !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+.navbar.navbar-themed .navbar-brand,
+.navbar.navbar-themed .nav-link,
+.navbar.navbar-themed .nav-item.nav-link {
+  color: rgba(255, 255, 255, 0.78) !important;
+}
+
+.navbar.navbar-themed .navbar-brand:hover,
+.navbar.navbar-themed .nav-link:hover,
+.navbar.navbar-themed .nav-item.nav-link:hover {
+  color: #ffffff !important;
+}
+
+.navbar.navbar-themed .nav-item.nav-link.active {
+  color: #ffffff !important;
+}
+
+.navbar.navbar-themed #theme-icon {
+  color: rgba(255, 255, 255, 0.55) !important;
+}
+
+.hero-section {
+  min-height: calc(100vh - 64px) !important;
+}
