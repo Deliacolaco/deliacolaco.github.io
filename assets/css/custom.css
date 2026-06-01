@@ -3022,3 +3022,18 @@ main,
 .hidden-section + .hidden-section {
   margin-top: 0 !important;
 }
+.hero-section .scroll-down {
+
+  pointer-events: auto !important;
+
+  cursor: pointer !important;
+
+  text-decoration: none !important;
+
+}
+
+.hero-section .scroll-down:hover {
+
+  text-decoration: none !important;
+
+}
