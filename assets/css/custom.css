@@ -1515,6 +1515,7 @@ body,
   width: auto !important;
   display: block !important;
   object-fit: contain !important;
+  filter: brightness(0) invert(1) !important;
 }
 
 .logo-link {
@@ -2529,50 +2530,62 @@ body,
   justify-content: center !important;
   align-items: center !important;
   flex-wrap: wrap !important;
-  gap: 0.65rem !important;
+  gap: 0 !important;
   margin: 0 0 1.85rem 0 !important;
+  color: rgba(255, 255, 255, 0.88) !important;
+  font-size: 1rem !important;
+  font-weight: 500 !important;
 }
 
 .skill-pill {
   display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;
-  padding: 0.42rem 1.05rem !important;
-  border: 1px solid rgba(255, 255, 255, 0.48) !important;
-  border-radius: 999px !important;
-  background: rgba(255, 255, 255, 0.08) !important;
-  color: rgba(255, 255, 255, 0.86) !important;
-  font-size: 0.95rem !important;
-  font-weight: 600 !important;
-  line-height: 1 !important;
-  backdrop-filter: blur(8px) !important;
-  -webkit-backdrop-filter: blur(8px) !important;
+  padding: 0 !important;
+  border: none !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  color: rgba(255, 255, 255, 0.88) !important;
+  font-size: 1rem !important;
+  font-weight: 500 !important;
+  line-height: 1.4 !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+.skill-pill:not(:last-child)::after {
+  content: "·" !important;
+  display: inline-block !important;
+  margin: 0 0.55rem !important;
+  color: rgba(255, 255, 255, 0.65) !important;
+  font-weight: 500 !important;
 }
 
 .hero-links {
   display: flex !important;
   justify-content: center !important;
-  align-items: stretch !important;
+  align-items: center !important;
   flex-wrap: wrap !important;
   gap: 0.85rem !important;
 }
 
 .hero-card-btn {
-  width: 170px !important;
-  min-height: 72px !important;
-  display: flex !important;
+  width: auto !important;
+  min-width: 132px !important;
+  min-height: 46px !important;
+  display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;
-  gap: 0.75rem !important;
-  padding: 0.9rem 1rem !important;
-  border: 1px solid rgba(255, 255, 255, 0.34) !important;
-  border-radius: 12px !important;
-  background: rgba(255, 255, 255, 0.12) !important;
+  gap: 0.55rem !important;
+  padding: 0.62rem 1.25rem !important;
+  border: 1px solid rgba(255, 255, 255, 0.42) !important;
+  border-radius: 10px !important;
+  background: rgba(255, 255, 255, 0.10) !important;
   color: #ffffff !important;
   text-decoration: none !important;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18) !important;
-  backdrop-filter: blur(9px) !important;
-  -webkit-backdrop-filter: blur(9px) !important;
+  box-shadow: none !important;
+  backdrop-filter: blur(7px) !important;
+  -webkit-backdrop-filter: blur(7px) !important;
   transition: transform 0.25s ease, background-color 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease !important;
 }
 
@@ -2583,14 +2596,14 @@ body,
 }
 
 .hero-card-btn i {
-  font-size: 1.35rem !important;
+  font-size: 1.15rem !important;
   color: rgba(255, 255, 255, 0.9) !important;
   margin: 0 !important;
 }
 
 .hero-card-btn span {
   color: #ffffff !important;
-  font-size: 1rem !important;
+  font-size: 0.98rem !important;
   font-weight: 700 !important;
   line-height: 1 !important;
 }
@@ -2677,8 +2690,8 @@ body,
   }
 
   .skill-pill {
-    font-size: 0.82rem !important;
-    padding: 0.35rem 0.78rem !important;
+    font-size: 0.9rem !important;
+    padding: 0 !important;
   }
 
   .hero-links {
@@ -2690,7 +2703,7 @@ body,
 
   .hero-card-btn {
     width: 100% !important;
-    min-height: 58px !important;
+    min-height: 48px !important;
   }
 
   .hero-section .scroll-down {
@@ -2813,10 +2826,12 @@ body,
 
 .navbar > .container,
 .navbar > .container-fluid {
-  max-width: 100% !important;
+  max-width: 1040px !important;
   width: 100% !important;
-  padding-left: 14rem !important;
-  padding-right: 14rem !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: 1.5rem !important;
+  padding-right: 1.5rem !important;
 }
 
 /* Remove blue focus box */
