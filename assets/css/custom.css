@@ -3034,3 +3034,93 @@ body,
   text-decoration: none !important;
 
 }
+
+
+/* ==========================================================================
+   About Intro Section
+   ========================================================================== */
+
+.about-intro-section {
+  background: #ffffff !important;
+  padding: 4rem 0 3rem 0 !important;
+  color: #111111 !important;
+}
+
+.about-intro-container {
+  max-width: 1080px !important;
+  margin: 0 auto !important;
+  padding: 0 1.5rem !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 4rem !important;
+}
+
+.about-intro-image {
+  flex: 0 0 280px !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+.about-intro-image img {
+  width: 280px !important;
+  height: 280px !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  border-radius: 50% !important;
+  border: 4px solid rgba(0, 0, 0, 0.06) !important;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.12) !important;
+}
+
+.about-intro-content {
+  flex: 1 !important;
+  max-width: 700px !important;
+  text-align: left !important;
+}
+
+.about-intro-content h1 {
+  margin-bottom: 1.35rem !important;
+  font-size: clamp(2.2rem, 4vw, 3rem) !important;
+  font-weight: 700 !important;
+  color: #111111 !important;
+}
+
+.about-intro-content p {
+  margin-bottom: 1rem !important;
+  color: #222222 !important;
+  font-size: 1.05rem !important;
+  line-height: 1.75 !important;
+  text-align: left !important;
+}
+
+@media (max-width: 768px) {
+  .about-intro-section {
+    padding: 3rem 0 2rem 0 !important;
+  }
+
+  .about-intro-container {
+    flex-direction: column !important;
+    gap: 2rem !important;
+    text-align: center !important;
+  }
+
+  .about-intro-image {
+    flex: 0 0 auto !important;
+  }
+
+  .about-intro-image img {
+    width: 220px !important;
+    height: 220px !important;
+  }
+
+  .about-intro-content {
+    max-width: 100% !important;
+    text-align: center !important;
+  }
+
+  .about-intro-content h1,
+  .about-intro-content p {
+    text-align: center !important;
+  }
+}
