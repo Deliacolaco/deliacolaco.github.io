@@ -65,9 +65,9 @@ disqus:
 
 ### Analytics ###
 analytics:
-  enabled: false                                        # Set true to enable analytics
+  enabled: true                                        # Set true to enable analytics
   google:
-    tracking_id: your-google-tracking-id
+    tracking_id: G-CGJW577F92
 
 
 ### Buy me a coffee ###
@@ -100,6 +100,3 @@ exclude:
 
 kramdown:
   math_engine: mathjax
-
-# Google Analytics
-google_analytics: G-CGJW577F92
