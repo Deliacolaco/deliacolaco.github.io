@@ -100,3 +100,6 @@ exclude:
 
 kramdown:
   math_engine: mathjax
+
+# Google Analytics
+google_analytics: G-CGJW577F92
