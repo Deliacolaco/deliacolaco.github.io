@@ -33,8 +33,12 @@ Does discounting above **30%** actually drive meaningful volume uplift, or is th
 ## Tools & Approach
 
 #### Python
-- Data cleaning, exploratory analysis, quadrant segmentation, and margin waterfall analysis.
+**Python**
+Data cleaning, exploratory analysis, quadrant segmentation, and margin waterfall analysis.
 - **Libraries:** Pandas, Matplotlib, Seaborn, SQLAlchemy.
+
+- **[Quadrant Segmentation](Figures/quadrant-segmentation.png)** — Classified all 12 category-region combinations into four strategic quadrants (Invest, Grow, Fix, Review) using total sales (median threshold) and total profit (zero threshold) as axes.
+- - **Margin Waterfall** — Built for each product category to separate cost structure problems from discounting problems, showing revenue without discount, discount loss, cost, and actual profit at each stage. View the margin waterfalls for **[Furniture](Figures/margin-waterfall-furniture.png)**, **[Office Supplies](Figures/margin-waterfall-office-supplies.png)**, and **[Technology](Figures/margin-waterfall-technology.png)**. 
 
 #### SQL (SQLite via Jupyter)
 - Three layers of discount and margin analysis across all category-region combinations.
@@ -66,6 +70,8 @@ Does discounting above **30%** actually drive meaningful volume uplift, or is th
 - Average profit per transaction: **-$8.96**
 - Total sales: **$255,033**
 - Cost accounts for **97%** of actual sales revenue, indicating a structural cost issue beyond discounting.
+- Margin waterfall analysis confirms that even eliminating all discounts would only recover $291,791,  
+insufficient to make VIC Furniture commercially viable without supplier cost renegotiation.
 
 #### 2. VIC Furniture is the most heavily discounted segment
 
