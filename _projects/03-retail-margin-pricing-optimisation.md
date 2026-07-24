@@ -6,7 +6,7 @@ description: Analysed Australian retail pricing and profitability data to uncove
 featured: true
 url: /projects/retail-margin-pricing-optimisation/
 ---
-# Retail Margin & Pricing Optimisation — Australian Retail
+# Retail Margin & Pricing Optimisation, Australian Retail
 
 ## Project Overview
 
@@ -16,7 +16,7 @@ A mid-size Australian retailer needed to understand which product categories wer
 
 ## Business Questions
 
-### Question 1 — Profitability by Region and Category
+#### Question 1 — Profitability by Region and Category
 
 Which category is most profitable by region—and does that answer change when you look at **margin % versus total profit**? Is that margin improving or declining over time by quarter, or is a strong overall number hiding a deteriorating trend underneath?
 
@@ -145,7 +145,7 @@ High-level executive dashboard covering:
 - Quarterly Profit Trends
 
 🔗 **Tableau Public:**  
-*(https://public.tableau.com/app/profile/delia.colaco/viz/AustralianRetailMarginDiscountAnalysisCFOSummary/CFOSummary)*
+**[View CFO Dashboard](https://public.tableau.com/app/profile/delia.colaco/viz/AustralianRetailMarginDiscountAnalysisCFOSummary/CFOSummary)**
 
 ---
 
@@ -161,7 +161,7 @@ Commercial dashboard covering:
 - Sales Volume vs Discount Analysis
 
 🔗 **Tableau Public:**  
-*(https://public.tableau.com/app/profile/delia.colaco/viz/AustralianRetailMarginDiscountAnalysis/CommercialMarginDiscountAnalysisAustralianRetail?publish=yes)*
+**[View Commercial Deep Dive Dashboard](https://public.tableau.com/app/profile/delia.colaco/viz/AustralianRetailMarginDiscountAnalysis/CommercialMarginDiscountAnalysisAustralianRetail?publish=yes)**
 
 
 ---
