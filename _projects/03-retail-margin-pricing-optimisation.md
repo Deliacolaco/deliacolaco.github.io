@@ -191,3 +191,6 @@ Commercial dashboard covering:
 - Dashboard Design
 - Data Storytelling
 - Business Analytics
+
+
+[View GitHub Project Folder](https://github.com/Deliacolaco/data-analytics-projects/tree/main/retail-margin-pricing-optimisation){:target="_blank"}
