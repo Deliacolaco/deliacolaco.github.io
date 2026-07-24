@@ -33,7 +33,7 @@ Does discounting above **30%** actually drive meaningful volume uplift, or is th
 ## Tools & Approach
 
 #### Python
-**Python**
+
 Data cleaning, exploratory analysis, quadrant segmentation, and margin waterfall analysis.
 - **Libraries:** Pandas, Matplotlib, Seaborn, SQLAlchemy.
 
@@ -90,6 +90,7 @@ insufficient to make VIC Furniture commercially viable without supplier cost ren
 - Total profit lost: **$47,376**
 - Discount frequency: **63.85%**
 - Average discount: **25.36%**
+- This single pricing decision is the largest single margin drain in the entire dataset.
 
 #### 5. Discounting above 30% does not drive meaningful volume
 
@@ -165,7 +166,6 @@ Commercial dashboard covering:
 - Discount Frequency
 - Margin vs Discount
 - Profit Threshold Analysis
-- Margin Waterfall
 - Discount Loss Treemap
 - Sales Volume vs Discount Analysis
 
