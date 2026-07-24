@@ -145,7 +145,7 @@ High-level executive dashboard covering:
 - Quarterly Profit Trends
 
 🔗 **Tableau Public:**  
-*(Add Tableau Public link here)*
+*(https://public.tableau.com/app/profile/delia.colaco/viz/AustralianRetailMarginDiscountAnalysisCFOSummary/CFOSummary)*
 
 ---
 
@@ -161,7 +161,7 @@ Commercial dashboard covering:
 - Sales Volume vs Discount Analysis
 
 🔗 **Tableau Public:**  
-*(https://public.tableau.com/app/profile/delia.colaco/viz/AustralianRetailMarginDiscountAnalysisCFOSummary/CFOSummary)*
+*(https://public.tableau.com/app/profile/delia.colaco/viz/AustralianRetailMarginDiscountAnalysis/CommercialMarginDiscountAnalysisAustralianRetail?publish=yes)*
 
 
 ---
