@@ -2455,6 +2455,7 @@ body,
 #projects .project.card p[id$="-tools"],
 .project.card p[id$="-tools"] {
   margin-top: auto !important;
+  flex-grow: 0 !important; 
 }
 
 /* ==========================================================================
