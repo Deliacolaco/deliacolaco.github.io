@@ -1,14 +1,15 @@
 <head>
+{% if site.analytics.enabled and site.analytics.google.tracking_id %}
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-CGJW77F92"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ site.analytics.google.tracking_id }}"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'G-CGJW77F92');
+  gtag('config', '{{ site.analytics.google.tracking_id }}');
 </script>
-
+{% endif %}
 
     {% assign title = page.title | default: site.title | escape %}
     {% assign description = page.description | default: site.description | strip_html | strip_newlines | truncate: 160 %}

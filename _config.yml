@@ -34,7 +34,7 @@ author:
 # gitlab            : your_username
 # instagram         : your_username
 # kaggle            : your_username
-  linkedin          : 
+  linkedin          : deliacolaco
   # medium            : your_username
 # soundcloud        : your_username
 # spotify           : your_username
@@ -65,9 +65,9 @@ disqus:
 
 ### Analytics ###
 analytics:
-  enabled: false                                        # Set true to enable analytics
+  enabled: true
   google:
-    tracking_id: G-CGJW577F92
+    tracking_id: G-CGJW77F92
 
 
 ### Buy me a coffee ###

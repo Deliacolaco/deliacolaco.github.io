@@ -2836,10 +2836,11 @@ body,
   padding-right: 1.5rem !important;
 }
 
-/* Remove blue focus box */
+/* Keep keyboard focus visible */
 .navbar a:focus,
 .navbar button:focus {
-  outline: none !important;
+  outline: 2px solid var(--accent-color) !important;
+  outline-offset: 3px !important;
   box-shadow: none !important;
 }
 /* ==========================================================================
