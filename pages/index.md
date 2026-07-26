@@ -7,8 +7,8 @@ permalink: /
 
 <div style="height: 5vh;"></div>
 
-<!-- About Section (Initially Hidden) -->
-<section id="about" class="hidden-section">
+<!-- About Section -->
+<section id="about">
   {% include about.html %}
   {% include fprojects.html %}
 </section>

@@ -42,32 +42,6 @@ function scrollToAbout() {
   }
 }
 
-  
-  /**
-   * Set up the about section scroll animation
-   * (adds or removes 'visible-section' based on scroll position).
-   */
-  function initAboutSectionScrollAnimation(aboutSection) {
-    if (!aboutSection) return;
-  
-    let lastScrollY = window.scrollY;
-  
-    function handleScroll() {
-      const currentScrollY = window.scrollY;
-      const triggerHeight = window.innerHeight * 0.5;
-  
-      if (currentScrollY > triggerHeight && currentScrollY > lastScrollY) {
-        aboutSection.classList.add("visible-section");
-      } else if (currentScrollY < lastScrollY && currentScrollY < triggerHeight) {
-        aboutSection.classList.remove("visible-section");
-      }
-  
-      lastScrollY = currentScrollY;
-    }
-  
-    window.addEventListener("scroll", handleScroll);
-  }
-  
   /**
    * Use IntersectionObserver to toggle the visibility of the scroll arrow.
    */
@@ -156,10 +130,6 @@ function scrollToAbout() {
         toggleTheme();
       });
     }
-  
-    // About section scroll animation
-    initAboutSectionScrollAnimation(aboutSection);
-  
     // Intersection Observer for scroll arrow
     initScrollArrowIntersection(aboutSection, scrollArrow);
   
