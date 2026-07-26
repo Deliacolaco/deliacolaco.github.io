@@ -59,76 +59,10 @@ html {
   pointer-events: auto;
 }
 
-/* ==========================================================================
-   Timeline Component Styles
-   ========================================================================== */
-
 /* Link / Navigation & Active Indicators */
 .link-after {
   background: linear-gradient(to right, rgb(3, 161, 224), rgb(0, 255, 221)) !important;
 }
-
-/* Timeline Backgrounds & Borders */
-.timeline-body::after {
-  background-color: var(--accent-color) !important;
-}
-
-.timeline-body .timeline-item:after {
-  border: 4px solid var(--accent-color) !important; /* Keeps the cyan border */
-}
-
-/* Light Mode - Timeline Content */
-.timeline-body .timeline-item .content {
-  background: linear-gradient(to right, rgb(168, 226, 248), rgb(0, 255, 221))
-      left bottom no-repeat;
-  border-bottom: 0px solid var(--accent-color) !important;
-  background-size: 100% 2px;
-  padding: 1.5rem;
-  border-radius: 10px;
-  box-shadow: 0 0 12px rgba(3, 161, 224, 0.15);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
-
-.timeline-body .timeline-item .content:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 0 18px rgba(3, 161, 224, 0.3);
-}
-
-[data-theme="light"] .timeline-body,
-[data-theme="light"] .timeline-body .timeline-item .content,
-[data-theme="light"] .timeline-body .timeline-item:after {
-  background-color: var(--background-color) !important;
-}
-
-/* Dark Mode - Timeline Backgrounds */
-[data-theme="dark"] .timeline-body {
-  background-color: #242526 !important;
-}
-
-[data-theme="dark"] .timeline-body .timeline-item .content {
-  background-color: #242526 !important;
-}
-
-[data-theme="dark"] .timeline-body .timeline-item:after {
-  background-color: #242526 !important;
-}
-
-.timeline-item {
-  opacity: 0;
-  transform: translateY(30px);
-  animation: fadeInUp 0.8s ease forwards;
-}
-
-.timeline-item:nth-child(1) { animation-delay: 0.1s; }
-.timeline-item:nth-child(2) { animation-delay: 0.2s; }
-.timeline-item:nth-child(3) { animation-delay: 0.3s; }
-.timeline-item:nth-child(4) { animation-delay: 0.4s; }
-
-@keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(30px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
 
 /* ==========================================================================
    Badge Component Styles
@@ -1350,16 +1284,6 @@ body,
 .timeline-leadership {
 
   --timeline-color: #7e57c2;
-
-}
-
-.timeline-placeholder {
-
-  --timeline-color: #8a8a8a;
-
-  opacity: 0.78;
-
-  border: 1px dashed rgba(138, 138, 138, 0.55);
 
 }
 
