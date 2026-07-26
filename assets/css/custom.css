@@ -805,13 +805,11 @@ footer a:hover,
 
 /*-------------------------------------------
   Hover Effects for Carousel Controls
-  (Removed parent's scale to prevent double scaling)
 -------------------------------------------*/
 .carousel-control-prev:hover,
 .carousel-control-next:hover {
     animation: bounce 0.5s ease-in-out;
     background: none !important;
-    /* Removed transform: scale(1.5) to avoid double scaling */
 }
 
 /*-------------------------------------------
@@ -849,15 +847,9 @@ footer a:hover,
 
 
 
-/* ==========================================================================
-   Final Homepage Hero Layout
-   ========================================================================== */
-
 body,
 
 [data-theme="light"] body {
-
-  background-color: var(--background-color) !important;
 
   color: var(--text-color) !important;
 
@@ -1126,11 +1118,6 @@ body,
 /* ==========================================================================
    Background Left-Rail Timeline
    ========================================================================== */
-
-.background-section {
-  margin-top: 4rem;
-  margin-bottom: 3rem;
-}
 
 .background-section-header {
   display: flex;
@@ -1486,10 +1473,6 @@ body,
 }
 
 @media (max-width: 768px) {
-  .background-section {
-    margin-top: 3rem;
-  }
-
   .background-section-header {
     margin-bottom: 2rem;
   }
@@ -1751,7 +1734,6 @@ body,
 
   .hero-section .hero-title {
     font-size: clamp(3rem, 12vw, 4.5rem) !important;
-    letter-spacing: 0.02em !important;
   }
 
   .hero-section .hero-accent {
@@ -1768,7 +1750,6 @@ body,
 
   .hero-section .skill-pill {
     font-size: 0.9rem !important;
-    padding: 0 !important;
   }
 
   .hero-section .hero-links {
