@@ -86,10 +86,7 @@ html {
    ========================================================================== */
 
 /* Link / Navigation & Active Indicators */
-.link-after,
-.nav-link::after,
-.navbar-brand::after,
-.nav-item.active::after {
+.link-after {
   background: linear-gradient(to right, rgb(3, 161, 224), rgb(0, 255, 221)) !important;
 }
 
@@ -681,84 +678,99 @@ p.text-center a:hover::before {
 
 
 /* ==========================================================================
-   Navbar Styles
+   Navbar
    ========================================================================== */
 
-/* Basic Navbar */
-.navbar {
-
-  padding: 0.5rem 1rem;
-
-  margin-top: 0;
+.navbar.navbar-themed {
+  width: 100vw !important;
+  max-width: 100vw !important;
   min-height: 64px !important;
+  margin: 0 !important;
+  margin-left: calc(50% - 50vw) !important;
+  margin-right: calc(50% - 50vw) !important;
+  padding: 0 !important;
   position: sticky !important;
-
   top: 0 !important;
-
   z-index: 1100 !important;
-
-  background-color: var(--background-color) !important;
-
+  background: #12100f !important;
+  box-shadow: none !important;
+  border: none !important;
 }
 
-/* Navbar Brand */
+.navbar.navbar-themed > .container,
+.navbar.navbar-themed > .container-fluid,
+.navbar.navbar-themed .navbar-inner {
+  max-width: 980px !important;
+  width: 100% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: 1.5rem !important;
+  padding-right: 1.5rem !important;
+}
+
 .navbar.navbar-themed .navbar-brand {
   margin-right: 1rem;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  color: rgba(255, 255, 255, 0.78) !important;
   opacity: 1 !important;
   transition: none !important;
   font-size: 14px !important;
+  text-decoration: none !important;
 }
 
-[data-theme="dark"] .navbar.navbar-themed .navbar-brand {
-  color: rgba(255, 255, 255, 0.85) !important;
-}
-
-[data-theme="light"] .navbar.navbar-themed .navbar-brand {
-  color: rgba(0, 0, 0, 0.85) !important;
-}
-
-.navbar.navbar-themed .navbar-brand:hover {
+.navbar.navbar-themed .navbar-brand:hover,
+.navbar.navbar-themed .navbar-brand:focus {
+  color: #ffffff !important;
   opacity: 1 !important;
+  text-decoration: none !important;
   background-color: transparent !important;
 }
 
-/* Navigation Links */
+.navbar.navbar-themed .navbar-brand::after,
+.navbar.navbar-themed .navbar-brand::before {
+  display: none !important;
+  content: none !important;
+}
+
+.navbar.navbar-themed .navbar-logo {
+  height: 42px !important;
+  width: auto !important;
+  display: block !important;
+  object-fit: contain !important;
+  filter: brightness(0) invert(1) !important;
+  opacity: 1 !important;
+}
+
 .navbar.navbar-themed .navbar-nav .nav-item.nav-link,
 .navbar.navbar-themed .nav-link {
   padding: 0.425rem 1rem;
+  color: rgba(255, 255, 255, 0.78) !important;
   transition: none !important;
   opacity: 1 !important;
   position: relative;
 }
 
-[data-theme="dark"] .navbar.navbar-themed .nav-link {
-  color: rgba(255, 255, 255, 0.5) !important;
-}
-
-[data-theme="light"] .navbar.navbar-themed .nav-link {
-  color: rgba(0, 0, 0, 0.5) !important;
-}
-
 .navbar.navbar-themed .navbar-nav .nav-item.nav-link:hover,
 .navbar.navbar-themed .nav-link:hover {
+  color: #ffffff !important;
   opacity: 1 !important;
   background-color: transparent !important;
 }
 
-/* Active Link */
 .navbar.navbar-themed .nav-item.nav-link.active {
+  color: #ffffff !important;
   font-weight: 700 !important;
   box-sizing: content-box !important;
   padding: 0.425rem 0 !important;
   margin: 0 1rem !important;
 }
 
-[data-theme="dark"] .navbar.navbar-themed .nav-item.nav-link.active {
-  color: #fff !important;
-}
-
-[data-theme="light"] .navbar.navbar-themed .nav-item.nav-link.active {
-  color: #000 !important;
+.navbar.navbar-themed .nav-link::after,
+.navbar.navbar-themed .nav-item.active::after {
+  background: linear-gradient(to right, rgb(3, 161, 224), rgb(0, 255, 221)) !important;
 }
 
 .navbar.navbar-themed .nav-item.nav-link.active::after {
@@ -771,19 +783,12 @@ p.text-center a:hover::before {
   background-color: #007bff !important;
 }
 
-[data-theme="dark"] .navbar.navbar-themed .nav-item.nav-link.active::after,
-[data-theme="light"] .navbar.navbar-themed .nav-item.nav-link.active::after {
-  background-color: #007bff !important;
-}
-
-/* Icon Styling */
 .navbar.navbar-themed .nav-link i {
   font-size: 1rem;
   color: inherit;
   transition: color 0.3s ease;
 }
 
-/* Social & Theme Toggle Links */
 .navbar.navbar-themed .navbar-nav > div.navbar-nav .nav-link {
   text-decoration: none !important;
   border: none !important;
@@ -797,18 +802,13 @@ p.text-center a:hover::before {
   content: none !important;
 }
 
-/* LinkedIn Icon */
-.navbar.navbar-themed .nav-link .fa-linkedin {
+.navbar.navbar-themed .nav-link .fa-linkedin,
+.navbar.navbar-themed .nav-link .fa-github {
   transition: color 0.3s ease;
 }
 
 .navbar.navbar-themed .nav-link:hover .fa-linkedin {
   color: #0077b5 !important;
-}
-
-/* GitHub Icon */
-.navbar.navbar-themed .nav-link .fa-github {
-  transition: color 0.3s ease;
 }
 
 [data-theme="light"] .navbar.navbar-themed .nav-link:hover .fa-github {
@@ -819,35 +819,25 @@ p.text-center a:hover::before {
   color: #ffffff !important;
 }
 
-/* Theme Toggle */
-.navbar.navbar-themed #theme-toggle {
-  opacity: 1 !important;
-  text-decoration: none !important;
-  border: none !important;
-  background: none !important;
-  position: static !important;
+.navbar.navbar-themed a:focus,
+.navbar.navbar-themed button:focus {
+  outline: 2px solid var(--accent-color) !important;
+  outline-offset: 3px !important;
+  box-shadow: none !important;
 }
 
-.navbar.navbar-themed #theme-toggle::after,
-.navbar.navbar-themed #theme-toggle::before {
-  display: none !important;
-  content: none !important;
-}
+@media (max-width: 768px) {
+  .navbar.navbar-themed > .container,
+  .navbar.navbar-themed > .container-fluid,
+  .navbar.navbar-themed .navbar-inner {
+    max-width: 100% !important;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
 
-[data-theme="light"] #theme-icon {
-  color: #999999;
-}
-
-[data-theme="light"] .navbar.navbar-themed #theme-toggle:hover #theme-icon {
-  color: #333333;
-}
-
-[data-theme="dark"] #theme-icon {
-  color: #666666;
-}
-
-[data-theme="dark"] .navbar.navbar-themed #theme-toggle:hover #theme-icon {
-  color: #ffd700;
+  .navbar.navbar-themed .navbar-logo {
+    height: 36px !important;
+  }
 }
 
 /* Project Page GitHub Icon */
@@ -1311,11 +1301,6 @@ body,
   color: #f1f1f1 !important;
 }
 
-[data-theme="dark"] .navbar,
-[data-theme="dark"] .navbar-themed {
-  background-color: #121212 !important;
-}
-
 [data-theme="dark"] .profile-name {
   color: #f1f1f1 !important;
 }
@@ -1334,14 +1319,6 @@ body,
 
 [data-theme="dark"] .tagline-skills {
   color: #b8c3ca !important;
-}
-
-[data-theme="dark"] .navbar-brand {
-  color: #f1f1f1 !important;
-}
-
-[data-theme="dark"] .nav-link {
-  color: rgba(255, 255, 255, 0.65) !important;
 }
 
 [data-theme="dark"] .landing-buttons .resume,
@@ -1456,42 +1433,6 @@ body,
     animation: none !important;
   }
 }
-/* Navbar Logo */
-.navbar-logo {
-  height: 42px !important;
-  width: auto !important;
-  display: block !important;
-  object-fit: contain !important;
-  filter: brightness(0) invert(1) !important;
-}
-
-.logo-link {
-  display: flex !important;
-  align-items: center !important;
-  text-decoration: none !important;
-  padding-top: 0 !important;
-  padding-bottom: 0 !important;
-}
-
-.logo-link:hover,
-.logo-link:focus {
-  text-decoration: none !important;
-  background-color: transparent !important;
-}
-
-.logo-link::after,
-.logo-link::before {
-  display: none !important;
-  content: none !important;
-}
-
-@media (max-width: 768px) {
-  .navbar-logo {
-    height: 36px !important;
-  }
-}
-
-
   #about,
 
   #projects,
@@ -2388,39 +2329,6 @@ body,
     animation: none !important;
   }
 }
-/* ==========================================================================
-   Hero Navbar Overlay Fix
-   Removes the light-blue navbar band above the homepage hero
-   ========================================================================== */
-
-.navbar,
-.navbar.navbar-themed {
-  background: rgba(18, 16, 15, 0.92) !important;
-  min-height: 64px !important;
-  box-shadow: none !important;
-  border: none !important;
-}
-
-.navbar.navbar-themed .navbar-brand,
-.navbar.navbar-themed .nav-link,
-.navbar.navbar-themed .nav-item.nav-link {
-  color: rgba(255, 255, 255, 0.78) !important;
-}
-
-.navbar.navbar-themed .navbar-brand:hover,
-.navbar.navbar-themed .nav-link:hover,
-.navbar.navbar-themed .nav-item.nav-link:hover {
-  color: #ffffff !important;
-}
-
-.navbar.navbar-themed .nav-item.nav-link.active {
-  color: #ffffff !important;
-}
-
-.navbar.navbar-themed #theme-icon {
-  color: rgba(255, 255, 255, 0.55) !important;
-}
-
 .hero-section {
   min-height: calc(100vh - 64px) !important;
 }
@@ -2441,28 +2349,6 @@ body,
   background-color: #ffffff !important;
 }
 
-.navbar,
-.navbar.navbar-themed {
-  width: 100vw !important;
-  max-width: 100vw !important;
-  margin-left: calc(50% - 50vw) !important;
-  margin-right: calc(50% - 50vw) !important;
-  background: rgba(18, 16, 15, 0.96) !important;
-  position: sticky !important;
-  top: 0 !important;
-  z-index: 1100 !important;
-}
-
-.navbar > .container,
-.navbar > .container-fluid {
-  max-width: 1180px !important;
-  width: 100% !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
-  padding-left: 1.5rem !important;
-  padding-right: 1.5rem !important;
-}
-
 .hero-section {
   width: 100vw !important;
   max-width: 100vw !important;
@@ -2477,39 +2363,6 @@ body,
   content: none !important;
 }
 
-/* Remove dark/light toggle */
-#theme-toggle,
-#theme-icon {
-  display: none !important;
-}
-
-/* Fix navbar spacing after removing toggle */
-.navbar,
-.navbar.navbar-themed {
-  width: 100vw !important;
-  max-width: 100vw !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  background: #12100f !important;
-}
-
-.navbar > .container,
-.navbar > .container-fluid {
-  max-width: 1040px !important;
-  width: 100% !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
-  padding-left: 1.5rem !important;
-  padding-right: 1.5rem !important;
-}
-
-/* Keep keyboard focus visible */
-.navbar a:focus,
-.navbar button:focus {
-  outline: 2px solid var(--accent-color) !important;
-  outline-offset: 3px !important;
-  box-shadow: none !important;
-}
 /* ==========================================================================
    Final Homepage Hero + Navbar Overrides
    ========================================================================== */
@@ -2544,51 +2397,9 @@ body,
   padding: 0.58rem 1.2rem !important;
 }
 
-.navbar,
-.navbar.navbar-themed {
-  width: 100vw !important;
-  max-width: 100vw !important;
-  margin-left: calc(50% - 50vw) !important;
-  margin-right: calc(50% - 50vw) !important;
-  padding: 0 !important;
-  background: #12100f !important;
-  position: sticky !important;
-  top: 0 !important;
-  z-index: 1100 !important;
-}
-
-.navbar > .container,
-.navbar > .container-fluid,
-.navbar-inner {
-  max-width: 980px !important;
-  width: 100% !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
-  padding-left: 1.5rem !important;
-  padding-right: 1.5rem !important;
-}
-
-.navbar-logo {
-  filter: brightness(0) invert(1) !important;
-  opacity: 1 !important;
-}
-
-#theme-toggle,
-#theme-icon {
-  display: none !important;
-}
-
 @media (max-width: 768px) {
   .hero-title {
     font-size: clamp(3rem, 12vw, 4.5rem) !important;
-  }
-
-  .navbar > .container,
-  .navbar > .container-fluid,
-  .navbar-inner {
-    max-width: 100% !important;
-    padding-left: 1rem !important;
-    padding-right: 1rem !important;
   }
 }
 .hero-section,
