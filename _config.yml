@@ -64,10 +64,7 @@ disqus:
 
 
 ### Analytics ###
-analytics:
-  enabled: true
-  google:
-    tracking_id: G-CGJW77F92
+ga4_measurement_id: G-CGJW577F92
 
 
 ### Buy me a coffee ###
