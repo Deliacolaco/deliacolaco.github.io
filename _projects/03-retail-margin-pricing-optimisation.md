@@ -45,7 +45,7 @@ This segment was quietly losing money on every sale, a **-1.70% margin**, while 
 
 #### 2. Profit disappears beyond modest discounts, with one tier causing the biggest loss
 
-Profit fell sharply as discounts moved from **20% to 30%**, with average profit falling from **AUD 38.82 to a loss of AUD 74.96**. The worst single pricing tier was the **80% discount on VIC Office Supplies**, responsible for **AUD 47,376 in lost profit**.
+Profit fell sharply as discounts moved from **20% to 30%**, with average profit falling from **$38.82 to –$74.96**. The worst single pricing tier was the **80% discount on VIC Office Supplies**, responsible for **$47,376 in lost profit**.
 
 #### 3. Heavy discounting adds almost no sales volume
 
