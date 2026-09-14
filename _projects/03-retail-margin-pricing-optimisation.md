@@ -8,7 +8,7 @@ url: /projects/retail-margin-pricing-optimisation/
 ---
 # Retail Margin & Pricing Optimisation, Australian Retail
 
-The analysis found one loss-making segment where high costs—not discounting—were the underlying problem, and identified a single pricing tier responsible for **&#36;47,376 in avoidable margin loss**. It also showed that discounts above **30%** add almost no sales volume, supporting a recommended **20% company-wide discount cap**.
+The analysis found one loss-making segment where high costs, not discounting, were the underlying problem, and identified a single pricing tier responsible for **&#36;47,376 in avoidable margin loss**. It also showed that discounts above **30%** add almost no sales volume, supporting a recommended **20% company-wide discount cap**.
 
 [Read the full technical breakdown on GitHub →](https://github.com/Deliacolaco/data-analytics-projects/blob/main/retail-margin-pricing-optimisation/README.md){:target="_blank" rel="noopener noreferrer"}
 
@@ -41,7 +41,7 @@ The supporting charts show which parts of the business need investment or attent
 
 #### 1. VIC Furniture has a cost problem, not just a discount problem
 
-This segment was quietly losing money on every sale—a **-1.70% margin**—while costs consumed **97% of revenue**. It was also the most heavily discounted segment: **67.84% of transactions** were discounted, at an average depth of **29.74%**, more than double every other Furniture region.
+This segment was quietly losing money on every sale, a **-1.70% margin**, while costs consumed **97% of revenue**. It was also the most heavily discounted segment: **67.84% of transactions** were discounted, at an average depth of **29.74%**, more than double every other Furniture region.
 
 #### 2. Profit disappears beyond modest discounts, with one tier causing the biggest loss
 
@@ -65,7 +65,7 @@ Introduce a clear cap to prevent deeper discounts from turning otherwise profita
 
 #### 2. Renegotiate VIC Furniture supplier costs
 
-Supplier costs—not discounting alone—are the primary driver of poor margins. Supplier renegotiation or category restructuring should be prioritised.
+Supplier costs, not discounting alone, are the primary driver of poor margins. Supplier renegotiation or category restructuring should be prioritised.
 
 #### 3. Eliminate the VIC Office Supplies 80% discount tier
 
