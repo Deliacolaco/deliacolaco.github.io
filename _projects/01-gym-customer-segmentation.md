@@ -67,13 +67,13 @@ Each segment was profiled across all demographic and behavioural variables to su
 
 Three distinct customer segments were identified:
 
-### Segment 1: Youthful, Economically-Conscious Individuals
+#### Segment 1: Youthful, Economically-Conscious Individuals
 Younger members with below-average income and high price sensitivity. This group represents the highest churn risk and responds best to low-cost, flexible membership options.
 
-### Segment 2: Wealthy Metropolitan Executives
+#### Segment 2: Wealthy Metropolitan Executives
 High-income, urban professionals with low visit frequency despite active memberships. This group has the highest revenue potential and is most receptive to premium services and convenience-focused offers.
 
-### Segment 3: Knowledgeable Suburban Adults
+#### Segment 3: Knowledgeable Suburban Adults
 Mid-career, family-oriented members with consistent attendance and strong retention rates. This group forms the gym's most stable customer base and responds well to community and family-focused engagement.
 
 ---

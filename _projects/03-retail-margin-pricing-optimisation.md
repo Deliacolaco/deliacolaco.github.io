@@ -91,9 +91,9 @@ These segments generate strong margins with relatively low discount dependency a
 
 ---
 
-# Dashboards
+## Dashboards
 
-### CFO Summary Dashboard
+#### CFO Summary Dashboard
 
 High-level executive dashboard covering:
 
@@ -112,7 +112,7 @@ High-level executive dashboard covering:
 
 ---
 
-### Commercial Deep Dive Dashboard
+#### Commercial Deep Dive Dashboard
 
 Commercial dashboard covering:
 
