@@ -8,7 +8,7 @@ url: /projects/retail-margin-pricing-optimisation/
 ---
 # Retail Margin & Pricing Optimisation, Australian Retail
 
-The analysis found one loss-making segment where high costs—not discounting—were the underlying problem, and identified a single pricing tier responsible for **$47,376 in avoidable margin loss**. It also showed that discounts above **30%** add almost no sales volume, supporting a recommended **20% company-wide discount cap**.
+The analysis found one loss-making segment where high costs—not discounting—were the underlying problem, and identified a single pricing tier responsible for **&#36;47,376 in avoidable margin loss**. It also showed that discounts above **30%** add almost no sales volume, supporting a recommended **20% company-wide discount cap**.
 
 [Read the full technical breakdown on GitHub →](https://github.com/Deliacolaco/data-analytics-projects/blob/main/retail-margin-pricing-optimisation/README.md){:target="_blank" rel="noopener noreferrer"}
 
@@ -45,7 +45,7 @@ This segment was quietly losing money on every sale—a **-1.70% margin**—whil
 
 #### 2. Profit disappears beyond modest discounts, with one tier causing the biggest loss
 
-Profit fell sharply as discounts moved from **20% to 30%**, with average profit changing from **$38.82 to -$74.96**. The worst single pricing tier was the **80% discount on VIC Office Supplies**, responsible for **$47,376 in lost profit**.
+Profit fell sharply as discounts moved from **20% to 30%**, with average profit falling from **&#36;38.82 to -&#36;74.96**. The worst single pricing tier was the **80% discount on VIC Office Supplies**, responsible for **&#36;47,376 in lost profit**.
 
 #### 3. Heavy discounting adds almost no sales volume
 
@@ -53,7 +53,7 @@ Orders discounted above **30%** sold only **0.04 more units per transaction** th
 
 #### 4. Technology is the strongest area of the business
 
-WA Technology delivered a **19.70% margin**, while NSW Technology produced **$75,084 profit from $415,304 in sales**.
+WA Technology delivered a **19.70% margin**, while NSW Technology generated **&#36;75,084 profit from &#36;415,304 in sales**.
 
 ---
 
